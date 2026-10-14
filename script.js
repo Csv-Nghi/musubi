@@ -4,6 +4,9 @@
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const I18N = window.MusubiI18n;
+  const ui = () => I18N.ui();
+  const onLang = (fn) => I18N.onChange(fn);
 
   /* ---------- 1. Nền particles (canvas) ---------- */
   (() => {
@@ -79,18 +82,15 @@
   (() => {
     const typedEl = $('#typed');
     if (!typedEl) return;
-    const phrases = [
-      'Dịch ngay khi mọi người đang nói',
-      'Hỗ trợ nhiều ngôn ngữ trong cùng một cuộc họp',
-      'Họp xong là có biên bản',
-    ];
-
     if (prefersReduced) {
-      typedEl.textContent = phrases[0];
+      typedEl.textContent = ui().typed[0];
+      onLang(() => { typedEl.textContent = ui().typed[0]; });
       return;
     }
-    let p = 0, c = 0, deleting = false;
+    let p = 0, c = 0, deleting = false, timer = 0;
+    const setTimeout = (fn, ms) => (timer = window.setTimeout(fn, ms));
     const tick = () => {
+      const phrases = ui().typed;
       const current = phrases[p];
       if (!deleting) {
         c++;
@@ -110,6 +110,11 @@
       }
       setTimeout(tick, 25);
     };
+    onLang(() => {
+      clearTimeout(timer);
+      p = 0; c = 0; deleting = false;
+      tick();
+    });
     tick();
   })();
 
@@ -154,16 +159,20 @@
     }
 
     // Dot nav
+    const labelDot = (b, s, i) => {
+      b.dataset.title = s.dataset.title || s.id;
+      b.setAttribute('aria-label', `${i + 1}. ${b.dataset.title}`);
+    };
     const dots = slides.map((s, i) => {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'dot';
-      b.dataset.title = s.dataset.title || s.id;
-      b.setAttribute('aria-label', `${i + 1}. ${b.dataset.title}`);
+      labelDot(b, s, i);
       b.addEventListener('click', () => goTo(i));
       if (dotNav) dotNav.appendChild(b);
       return b;
     });
+    onLang(() => dots.forEach((b, i) => labelDot(b, slides[i], i)));
 
     /* Counters, bars and timeline animate each time their slide becomes active */
     function animateCount(el) {
@@ -389,6 +398,7 @@
     }
     window.addEventListener('resize', scheduleFit);
     document.addEventListener('toggle', scheduleFit, true);
+    onLang(scheduleFit);
 
     // Initial state: fit, then jump (no animation) to the slide in the hash
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
@@ -430,43 +440,9 @@
       'mascot-assets/characters/inobe-thanks.png',
     ];
 
-    const pipeContent = [
-      {
-        title: '① Trước họp',
-        items: [
-          'Tạo dự án và thêm thành viên, chỉ cần làm một lần.',
-          'Thêm vài từ chuyên môn của dự án: tên module, từ viết tắt, những từ không cần dịch.',
-          'Chọn kiểu biên bản mà nhóm quen dùng.',
-        ],
-      },
-      {
-        title: '② Trong họp',
-        items: [
-          'Musubi nghe qua mic và loa của máy tính, nên dùng được với Teams, Zoom, Meet hay họp trực tiếp.',
-          'Chữ và bản dịch hiện ra ngay khi mọi người nói, kèm tên người đang nói.',
-          'Gặp từ lạ thì bấm vào xem giải thích.',
-        ],
-      },
-      {
-        title: '③ Sau họp',
-        items: [
-          'Vài phút sau có biên bản: quyết định, việc cần làm, ai làm, hạn khi nào.',
-          'Dòng nào cũng bấm xem lại được đúng câu người ta đã nói.',
-          'Người phụ trách đọc lại, sửa chỗ chưa đúng rồi mới chốt.',
-        ],
-      },
-      {
-        title: '④ Chia sẻ',
-        items: [
-          'Sao chép hoặc xuất file để gửi cho cả nhóm.',
-          'AI không tự gửi gì cả. Người dùng quyết định.',
-          'Duyệt những từ mới để buổi sau dịch chuẩn hơn.',
-        ],
-      },
-    ];
 
     function showPipeStep(index) {
-      const data = pipeContent[index];
+      const data = ui().pipe[index];
       if (!data) return;
       current = index;
       pipeSteps.forEach((b) => b.classList.remove('active'));
@@ -503,7 +479,7 @@
       clearTimeout(timer);
       if (prefersReduced) return;
       timer = setTimeout(() => {
-        showPipeStep((current + 1) % pipeContent.length);
+        showPipeStep((current + 1) % ui().pipe.length);
         schedule();
       }, STEP_MS);
     }
@@ -531,6 +507,7 @@
       else if (!visible && timer) stopLoop();
     };
     if (section) new MutationObserver(syncLoop).observe(section, { attributes: true, attributeFilter: ['class'] });
+    onLang(() => showPipeStep(current));
     showPipeStep(0);
     syncLoop();
   })();
@@ -603,41 +580,40 @@
     HOURS_PER_MD: 8,
     PILOT_MONTHS: 3,
     SERVER_VND: 24 * 26000,
-    RATES: { translate: 15000, textonly: 13000 },
+    RATES: { translate: 8300, textonly: 3600 },
   };
 
-  function computeRoi({ perDay, duration, writing, skip, hourly, rate }) {
+  function computeRoi({ perDay, duration, writing, hourly, rate }) {
     const ops = ROI.STAFF_MD * ROI.HOURS_PER_MD * hourly + ROI.SERVER_VND;
-    const net2For = (pd) => {
+    const netFor = (pd) => {
       const m = pd * ROI.DAYS;
-      const hw = (m * Math.max(writing - ROI.REVIEW_MIN, 0)) / 60;
-      const hs = (m * skip * duration) / 60;
+      const hours = (m * Math.max(writing - ROI.REVIEW_MIN, 0)) / 60;
       const aiCost = ((m * duration) / 60) * rate;
-      return { m, hw, hs, aiCost, net: (hw + hs) * hourly - aiCost - ops };
+      return { m, hours, aiCost, net: hours * hourly - aiCost - ops };
     };
-    const base = net2For(perDay);
-    const hoursWriting = base.hw;
-    const hoursSkip = base.hs;
-    const hours = hoursWriting + hoursSkip;
+    const base = netFor(perDay);
+    const hours = base.hours;
     const ai = base.aiCost;
-    const net1 = hoursWriting * hourly - ai - ops;
-    const net2 = base.net;
-    const payback = net2 > 0 ? (ROI.PILOT_MONTHS * ops) / net2 : null;
+    const net = base.net;
+    const payback = net > 0 ? (ROI.PILOT_MONTHS * ops) / net : null;
     let breakeven = null;
     for (let n = 1; n <= 200; n++) {
-      if (net2For(n).net >= 0) { breakeven = n; break; }
+      if (netFor(n).net >= 0) { breakeven = n; break; }
     }
-    return { meetings: base.m, hoursWriting, hoursSkip, hours, ai, ops, net1, net2, payback, breakeven };
+    return { meetings: base.m, hours, ai, ops, net, payback, breakeven };
   }
 
   (() => {
     const root = $('#roi');
     if (!root) return;
 
-    const nf1 = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 1 });
-    const nf0 = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 0 });
+    let nf1, nf0;
     const fmt1 = (x) => nf1.format(x).replace('-', '−');
-    const millions = (v) => `${fmt1(Math.round(v / 1e5) / 10)} triệu ₫`;
+    const setLocale = () => {
+      nf1 = new Intl.NumberFormat(ui().locale, { maximumFractionDigits: 1 });
+      nf0 = new Intl.NumberFormat(ui().locale, { maximumFractionDigits: 0 });
+    };
+    setLocale();
 
     const num = (id, def) => {
       const el = $(`#${id}`);
@@ -656,7 +632,6 @@
         perDay: num('roi-perday', 10),
         duration: num('roi-duration', 60),
         writing: num('roi-writing', 45),
-        skip: num('roi-skip', 0.3),
         hourly: num('roi-hourly', 100000),
         rate: ROI.RATES[plan],
       };
@@ -665,33 +640,32 @@
     function render() {
       const input = readInputs();
       const r = computeRoi(input);
+      const t = ui();
+      const millions = (v) => t.millions(v, fmt1);
 
-      setText('roi-perday-val', `${nf0.format(input.perDay)} cuộc họp/ngày`);
-      setText('roi-duration-val', `${nf0.format(input.duration)} phút`);
-      setText('roi-writing-val', `${nf0.format(input.writing)} phút`);
-      setText('roi-skip-val', `${nf1.format(input.skip)} người`);
-      setText('roi-hourly-val', `${nf0.format(input.hourly)} ₫`);
+      setText('roi-perday-val', t.perDay(nf0.format(input.perDay)));
+      setText('roi-duration-val', t.minutes(nf0.format(input.duration)));
+      setText('roi-writing-val', t.minutes(nf0.format(input.writing)));
+      setText('roi-hourly-val', t.vnd(nf0.format(input.hourly)));
 
-      setText('roi-hours', `${fmt1(Math.round(r.hours * 10) / 10)} giờ`);
+      setText('roi-hours', t.hours(fmt1(Math.round(r.hours * 10) / 10)));
       setText('roi-aicost', millions(r.ai));
-      setText('roi-net', millions(r.net2));
+      setText('roi-net', millions(r.net));
       const netEl = $('#roi-net');
-      if (netEl) netEl.classList.toggle('negative', r.net2 < 0);
-      setText('roi-net-minutes', millions(r.net1));
-      const net1El = $('#roi-net-minutes');
-      if (net1El) net1El.classList.toggle('negative', r.net1 < 0);
+      if (netEl) netEl.classList.toggle('negative', r.net < 0);
       setText(
         'roi-payback',
-        r.payback === null ? 'Chưa hoàn lại được với giả định này' : `${fmt1(Math.round(r.payback * 10) / 10)} tháng`
+        r.payback === null ? t.paybackNone : t.months(fmt1(Math.round(r.payback * 10) / 10))
       );
       setText(
         'roi-breakeven',
-        r.breakeven === null ? 'Chưa có lãi với giả định này' : `≥ ${r.breakeven} cuộc họp/ngày`
+        r.breakeven === null ? t.breakevenNone : t.breakeven(r.breakeven)
       );
     }
 
     root.addEventListener('input', render);
     root.addEventListener('change', render);
+    onLang(() => { setLocale(); render(); });
     render();
   })();
 
@@ -705,8 +679,6 @@
     }
 
     const STORE_KEY = 'musubi-presenter';
-    const HINT_ON = 'Click: tiếp · Shift+click/←: lùi · F: toàn màn hình · B: màn đen · P: tắt';
-    const HINT_OFF = 'Chế độ thuyết trình: tắt · P: bật';
     const IGNORE =
       'a, button, input, select, textarea, label, video, summary, details, [contenteditable], nav, ' +
       '.no-advance, .explorer, .chat, .pipeline, .tabs, .roi, .table-wrap, .dot-nav, #slide-counter, #presenter-hint';
@@ -724,7 +696,7 @@
 
     function showHint(ms) {
       if (!hint) return;
-      hint.textContent = on ? HINT_ON : HINT_OFF;
+      hint.textContent = on ? ui().hintOn : ui().hintOff;
       hint.classList.remove('hidden');
       clearTimeout(hintTimer);
       hintTimer = setTimeout(() => hint.classList.add('hidden'), ms);
@@ -867,6 +839,7 @@
     document.addEventListener('mousedown', wakeCursor, { passive: true });
     wakeCursor();
 
+    onLang(() => { if (hint) hint.textContent = on ? ui().hintOn : ui().hintOff; });
     applyMode();
     showHint(5000);
   })();

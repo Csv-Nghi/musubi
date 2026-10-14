@@ -96,6 +96,21 @@ code {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Language switch */
+.lang-switch {
+  display: flex; gap: 2px; margin-left: 20px; padding: 3px;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: rgba(13, 17, 23, .5);
+}
+.lang-switch button {
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 600; line-height: 1;
+  color: var(--text-dim); padding: 6px 10px; border-radius: 999px;
+  transition: color .2s, background .2s;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button[aria-pressed="true"] { background: var(--accent); color: #0d1117; }
+
 /* ===== Slides ===== */
 main { display: block; }
 .slide {
@@ -593,6 +608,7 @@ td .src { margin-top: 2px; }
 .roi:hover { transform: none; }
 .roi-inputs { display: flex; flex-direction: column; gap: 6px; }
 .roi-field label { display: block; font-size: 17px; color: var(--text); line-height: 1.35; }
+.roi-hint { display: block; margin-top: 2px; font-size: 14px; color: var(--text-dim); }
 .roi-control { display: flex; align-items: center; gap: 14px; }
 .roi-control input[type="range"] {
   flex: 1; min-width: 0; height: 40px;
@@ -896,7 +912,8 @@ body.cursor-hidden, body.cursor-hidden * { cursor: none !important; }
 @media (max-width: 900px) {
   /* Menu thu gọn: 8 link không vừa một hàng dưới 900px */
   .nav { padding: 12px 18px; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; order: 3; }
+  .lang-switch { margin-left: auto; margin-right: 12px; order: 2; }
   .nav-links {
     position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; gap: 0;

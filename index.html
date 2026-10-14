@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Musubi by CUBE: nghe họp, dịch ngay khi mọi người đang nói và viết sẵn biên bản. AI Hackathon 2026, Track 06.">
+  <meta name="description" content="Musubi by CUBE: nghe họp, dịch ngay khi mọi người đang nói và viết sẵn biên bản. AI Hackathon 2026, Track 06." data-i18n-attr="content=meta.description">
   <title>Musubi by CUBE — Portfolio · AI Hackathon 2026 · Track 06</title>
-  <link rel="stylesheet" href="styles.css?v=20261014j">
+  <link rel="stylesheet" href="styles.css?v=20261014k">
 </head>
 <body>
 
@@ -15,33 +15,36 @@
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <a href="#top" class="nav-brand">結び <span>Musubi</span></a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu" aria-expanded="false">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu" data-i18n-attr="aria-label=nav.menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav-links" id="nav-links">
-      <a href="#video">Demo</a>
-      <a href="#problem">Vấn đề</a>
-      <a href="#solution">Giải pháp</a>
-      <a href="#usecases">Use case</a>
-      <a href="#pricing">Báo giá</a>
-      <a href="#roadmap">Road Map</a>
-      <a href="#contact">Liên hệ</a>
-      <a href="#appendix">Phụ lục</a>
+      <a href="#video" data-i18n="nav.demo">Demo</a>
+      <a href="#problem" data-i18n="nav.problem">Vấn đề</a>
+      <a href="#solution" data-i18n="nav.solution">Giải pháp</a>
+      <a href="#usecases" data-i18n="nav.usecases">Use case</a>
+      <a href="#pricing" data-i18n="nav.pricing">Báo giá</a>
+      <a href="#roadmap" data-i18n="nav.roadmap">Road Map</a>
+      <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
+      <a href="#appendix" data-i18n="nav.appendix">Phụ lục</a>
     </nav>
+    <div class="lang-switch" id="lang-switch" role="group" aria-label="Ngôn ngữ / Language / 言語">
+      <button type="button" data-lang="vi" lang="vi">VI</button>
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="ja" lang="ja">日本語</button>
+    </div>
   </header>
 
   <main id="deck">
 
     <!-- ============ 1 · HERO ============ -->
-    <section class="slide slide-hero" id="top" data-title="Mở đầu" data-section="top">
+    <section class="slide slide-hero" id="top" data-title="Mở đầu" data-i18n-attr="data-title=slide.top" data-section="top">
       <div class="slide-inner">
         <div class="badge">AI HACKATHON 2026 · CUBE SYSTEM VIETNAM</div>
         <h1 class="hero-title">
           <span class="gradient-text">Musubi</span> by CUBE
         </h1>
-        <p class="hero-sub">
-          Nghe họp, dịch ngay, viết sẵn biên bản <em>(結び · gắn kết)</em>
-        </p>
+        <p class="hero-sub" data-i18n="hero.sub">Nghe họp, dịch ngay, viết sẵn biên bản <em>(結び · gắn kết)</em></p>
         <p class="hero-typed">
           <span id="typed"></span><span class="caret">|</span>
         </p>
@@ -50,16 +53,16 @@
         </div>
       </div>
       <img class="hero-mascot" src="mascot-assets/mascot/mascot-cheer.webp" alt="" width="1053" height="1008" loading="lazy" decoding="async" draggable="false">
-      <a href="#video" class="scroll-hint" aria-label="Slide tiếp theo">↓</a>
+      <a href="#video" class="scroll-hint" aria-label="Slide tiếp theo" data-i18n-attr="aria-label=hero.next">↓</a>
     </section>
 
     <!-- ============ 2 · 01 VIDEO DEMO ============ -->
-    <section class="slide" id="video" data-title="01 · Video demo" data-section="video">
+    <section class="slide" id="video" data-title="01 · Video demo" data-i18n-attr="data-title=slide.video" data-section="video">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num blue">01</span>
           <div>
-            <h2>Video demo</h2>
+            <h2 data-i18n="video.title">Video demo</h2>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/inobe-smile.png" alt="" width="321" height="321" loading="lazy" decoding="async" draggable="false">
         </div>
@@ -68,20 +71,20 @@
           <video id="demo-video" controls preload="metadata" playsinline poster="assets/videos/musubi-demo-poster.jpg"><source src="assets/videos/musubi-demo.mp4" type="video/mp4"></video>
           <div id="video-fallback" class="video-fallback" hidden>
             <span class="video-fallback-icon" aria-hidden="true">▶</span>
-            <p>Video demo đang được cập nhật</p>
+            <p data-i18n="video.fallback">Video demo đang được cập nhật</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ 3 · 02 PROBLEM ============ -->
-    <section class="slide" id="problem" data-title="02 · Vấn đề" data-section="problem">
+    <section class="slide" id="problem" data-title="02 · Vấn đề" data-i18n-attr="data-title=slide.problem" data-section="problem">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num orange">02</span>
           <div>
-            <h2>Vấn đề</h2>
-            <p class="lead">Mỗi vai trò trong dự án đều có những khó khăn khác nhau.</p>
+            <h2 data-i18n="problem.title">Vấn đề</h2>
+            <p class="lead" data-i18n="problem.lead">Mỗi vai trò trong dự án đều có những khó khăn khác nhau.</p>
           </div>
         </div>
 
@@ -91,21 +94,21 @@
               <img class="persona-avatar" src="mascot-assets/characters/claudina-question.png" alt="" width="320" height="320" loading="lazy" decoding="async" draggable="false">
               <h3>Dev</h3>
             </div>
-            <p class="persona-quote">“Họp xong mà em vẫn không biết mình phải làm gì.”</p>
+            <p class="persona-quote" data-i18n="problem.dev.quote">“Họp xong mà em vẫn không biết mình phải làm gì.”</p>
             <ul class="persona-pains">
-              <li>Không hiểu tiếng Nhật nên phải chờ comtor thuật lại.</li>
-              <li>Yêu cầu đổi ngay trong họp, nhưng công việc trên hệ thống vẫn như cũ, nên làm sai.</li>
+              <li data-i18n="problem.dev.pain1">Không hiểu tiếng Nhật nên phải chờ comtor thuật lại.</li>
+              <li data-i18n="problem.dev.pain2">Yêu cầu đổi ngay trong họp, nhưng công việc trên hệ thống vẫn như cũ, nên làm sai.</li>
             </ul>
           </article>
           <article class="card persona">
             <div class="persona-head">
               <img class="persona-avatar" src="mascot-assets/characters/transmaru-angry.png" alt="" width="320" height="320" loading="lazy" decoding="async" draggable="false">
-              <h3>Comtor / BrSE <small>· người dịch</small></h3>
+              <h3 data-i18n="problem.comtor.title">Comtor / BrSE <small>· người dịch</small></h3>
             </div>
-            <p class="persona-quote">“Vừa nghe, vừa dịch, vừa ghi thì không kịp.”</p>
+            <p class="persona-quote" data-i18n="problem.comtor.quote">“Vừa nghe, vừa dịch, vừa ghi thì không kịp.”</p>
             <ul class="persona-pains">
-              <li>Họp xong còn mất 30–60 phút ngồi viết biên bản.</li>
-              <li>Câu như <em>「検討します」</em> dịch đúng chữ nhưng sai ý, và người dịch là người chịu lỗi.</li>
+              <li data-i18n="problem.comtor.pain1">Họp xong còn mất 30–60 phút ngồi viết biên bản.</li>
+              <li data-i18n="problem.comtor.pain2">Câu như <em>「検討します」</em> dịch đúng chữ nhưng sai ý, và người dịch là người chịu lỗi.</li>
             </ul>
           </article>
           <article class="card persona">
@@ -113,10 +116,10 @@
               <img class="persona-avatar" src="mascot-assets/characters/ranma-question.png" alt="" width="321" height="321" loading="lazy" decoding="async" draggable="false">
               <h3>Leader / PM</h3>
             </div>
-            <p class="persona-quote">“Ai nhận việc gì, hạn khi nào? Tôi không có gì để chứng minh.”</p>
+            <p class="persona-quote" data-i18n="problem.pm.quote">“Ai nhận việc gì, hạn khi nào? Tôi không có gì để chứng minh.”</p>
             <ul class="persona-pains">
-              <li>Họp nhiều nên dễ quên những chi tiết nhỏ, nhưng về sau có thể gây ảnh hưởng lớn.</li>
-              <li>Nghe “để em xem lại” tưởng là nhận rồi, đến hạn mới biết chưa ai làm.</li>
+              <li data-i18n="problem.pm.pain1">Họp nhiều nên dễ quên những chi tiết nhỏ, nhưng về sau có thể gây ảnh hưởng lớn.</li>
+              <li data-i18n="problem.pm.pain2">Nghe “để em xem lại” tưởng là nhận rồi, đến hạn mới biết chưa ai làm.</li>
             </ul>
           </article>
         </div>
@@ -124,79 +127,79 @@
         <div class="counters counters-compact">
           <div class="counter-item">
             <div class="counter-value"><span data-count="30">0</span>–<span data-count="60">0</span>′</div>
-            <div class="counter-label">Ngồi nghe cả buổi, cuối buổi chờ giải thích lại</div>
+            <div class="counter-label" data-i18n="problem.counter1">Ngồi nghe cả buổi, cuối buổi chờ giải thích lại</div>
           </div>
           <div class="counter-item">
             <div class="counter-value"><span data-count="3">0</span>–<span data-count="5">0</span></div>
-            <div class="counter-label">Cuộc họp mỗi tuần, mỗi dự án</div>
+            <div class="counter-label" data-i18n="problem.counter2">Cuộc họp mỗi tuần, mỗi dự án</div>
           </div>
           <div class="counter-item">
-            <div class="counter-value"><span data-count="1">0</span>–<span data-count="2">0</span> tuần</div>
-            <div class="counter-label">Sau họp mới phát hiện hiểu lầm</div>
+            <div class="counter-value"><span data-count="1">0</span>–<span data-count="2">0</span> <span data-i18n="problem.weeks">tuần</span></div>
+            <div class="counter-label" data-i18n="problem.counter3">Sau họp mới phát hiện hiểu lầm</div>
           </div>
         </div>
 
-        <p class="punchline">Ba người, một nguyên nhân: điều đã nói trong họp không được ghi lại đầy đủ và chính xác.</p>
+        <p class="punchline" data-i18n="problem.punchline">Ba người, một nguyên nhân: điều đã nói trong họp không được ghi lại đầy đủ và chính xác.</p>
       </div>
     </section>
 
     <!-- ============ 5 · 03 SOLUTION (1/6) ============ -->
-    <section class="slide" id="solution" data-title="3.1 · Giải pháp" data-section="solution">
+    <section class="slide" id="solution" data-title="3.1 · Giải pháp" data-i18n-attr="data-title=slide.solution" data-section="solution">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num blue">3.1</span>
           <div>
-            <h2>Giải pháp</h2>
+            <h2 data-i18n="solution.title">Giải pháp</h2>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/consal-like.png" alt="" width="321" height="321" loading="lazy" decoding="async" draggable="false">
         </div>
 
-        <p class="lead-xl">Musubi là ứng dụng cài trên máy tính. Nó nghe cuộc họp qua mic và loa, hiện chữ và bản dịch ngay khi mọi người đang nói, rồi viết sẵn biên bản khi họp xong. Dùng với Teams, Zoom, Meet hay họp trực tiếp đều được.</p>
+        <p class="lead-xl" data-i18n="solution.lead">Musubi là ứng dụng cài trên máy tính. Nó nghe cuộc họp qua mic và loa, hiện chữ và bản dịch ngay khi mọi người đang nói, rồi viết sẵn biên bản khi họp xong. Dùng với Teams, Zoom, Meet hay họp trực tiếp đều được.</p>
 
-        <blockquote class="quote quote-lg">
+        <blockquote class="quote quote-lg" data-i18n="solution.quote">
           <b>Biên bản tự động:</b> Decision, Action item (người phụ trách, deadline), Issue.<br>
           <b>Evidence:</b> mỗi mục dẫn về đúng câu nói gốc trong bản ghi.<br>
           <b>Phát hiện điểm mơ hồ (ambiguity):</b> chỗ hai bên có thể hiểu khác nhau được đánh dấu sẵn.
         </blockquote>
 
         <div class="why-now grid-2">
-          <p>Nhóm làm việc với khách hàng Nhật mỗi ngày, nên Musubi xuất phát từ chính những khó khăn nhóm gặp trong họp.</p>
-          <p>Công nghệ Speech to text (STT) và dịch giờ đã đủ tốt để hỗ trợ xây dựng ứng dụng như Musubi. Trong 17 cuộc họp thử, Musubi đã ghi lại và dịch cả 449 lượt nói tiếng Nhật và tiếng Việt.</p>
+          <p data-i18n="solution.why1">Nhóm làm việc với khách hàng Nhật mỗi ngày, nên Musubi xuất phát từ chính những khó khăn nhóm gặp trong họp.</p>
+          <p data-i18n="solution.why2">Công nghệ Speech to text (STT) và dịch giờ đã đủ tốt để hỗ trợ xây dựng ứng dụng như Musubi. Trong 17 cuộc họp thử, Musubi đã ghi lại và dịch cả 449 lượt nói tiếng Nhật và tiếng Việt.</p>
         </div>
       </div>
     </section>
 
     <!-- ============ 6 · 03 PIPELINE (2/6) ============ -->
-    <section class="slide" id="pipeline" data-title="3.2 · Một cuộc họp với Musubi" data-section="solution">
+    <section class="slide" id="pipeline" data-title="3.2 · Một cuộc họp với Musubi" data-i18n-attr="data-title=slide.pipeline" data-section="solution">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num blue">3.2</span>
           <div>
-            <h2>Một cuộc họp với Musubi</h2>
-            <p class="lead">Từ lúc chuẩn bị đến lúc gửi biên bản cho cả nhóm.</p>
+            <h2 data-i18n="pipeline.title">Một cuộc họp với Musubi</h2>
+            <p class="lead" data-i18n="pipeline.lead">Từ lúc chuẩn bị đến lúc gửi biên bản cho cả nhóm.</p>
           </div>
         </div>
 
         <div class="pipeline">
           <button class="pipe-step active" data-step="0">
             <span class="pipe-icon">①</span>
-            <strong>Trước họp</strong>
-            <small>Tạo dự án, thêm từ chuyên môn</small>
+            <strong data-i18n="pipeline.s1.title">Trước họp</strong>
+            <small data-i18n="pipeline.s1.sub">Tạo dự án, thêm từ chuyên môn</small>
           </button>
           <button class="pipe-step" data-step="1">
             <span class="pipe-icon">②</span>
-            <strong>Trong họp</strong>
-            <small>Hiện chữ và bản dịch ngay</small>
+            <strong data-i18n="pipeline.s2.title">Trong họp</strong>
+            <small data-i18n="pipeline.s2.sub">Hiện chữ và bản dịch ngay</small>
           </button>
           <button class="pipe-step" data-step="2">
             <span class="pipe-icon">③</span>
-            <strong>Sau họp</strong>
-            <small>Có biên bản viết sẵn</small>
+            <strong data-i18n="pipeline.s3.title">Sau họp</strong>
+            <small data-i18n="pipeline.s3.sub">Có biên bản viết sẵn</small>
           </button>
           <button class="pipe-step" data-step="3">
             <span class="pipe-icon">④</span>
-            <strong>Chia sẻ</strong>
-            <small>Đọc lại và gửi cho cả nhóm</small>
+            <strong data-i18n="pipeline.s4.title">Chia sẻ</strong>
+            <small data-i18n="pipeline.s4.sub">Đọc lại và gửi cho cả nhóm</small>
           </button>
         </div>
 
@@ -205,13 +208,13 @@
     </section>
 
     <!-- ============ 9 · 03 WHY + TRUST (3/3) ============ -->
-    <section class="slide" id="why" data-title="3.3 · Vì sao chọn Musubi?" data-section="solution">
+    <section class="slide" id="why" data-title="3.3 · Vì sao chọn Musubi?" data-i18n-attr="data-title=slide.why" data-section="solution">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num blue">3.3</span>
           <div>
-            <h2>Vì sao chọn Musubi?</h2>
-            <p class="lead">Teams Copilot, Otter, Notta… tốt cho họp nói chung. Musubi làm riêng cho những cuộc họp nói nhiều thứ tiếng.</p>
+            <h2 data-i18n="why.title">Vì sao chọn Musubi?</h2>
+            <p class="lead" data-i18n="why.lead">Teams Copilot, Otter, Notta… tốt cho họp nói chung. Musubi làm riêng cho những cuộc họp nói nhiều thứ tiếng.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/inobe-motivated.png" alt="" width="321" height="321" loading="lazy" decoding="async" draggable="false">
         </div>
@@ -219,36 +222,36 @@
         <div class="why-grid">
           <article class="why-card">
             <span class="why-num">1</span>
-            <h3>Dịch ngay lúc họp</h3>
-            <p>Chữ và bản dịch hiện ngay khi người ta đang nói. Ai cũng theo kịp, không phải chờ cuối buổi nghe giải thích lại.</p>
+            <h3 data-i18n="why.c1.title">Dịch ngay lúc họp</h3>
+            <p data-i18n="why.c1.body">Chữ và bản dịch hiện ngay khi người ta đang nói. Ai cũng theo kịp, không phải chờ cuối buổi nghe giải thích lại.</p>
           </article>
           <article class="why-card">
             <span class="why-num">2</span>
-            <h3>Rõ ai nhận việc nào</h3>
-            <p>Việc nào đã có người nhận được ghi rõ, kèm câu họ đã nói. Không còn cảnh “tưởng anh ấy nhận rồi”.</p>
+            <h3 data-i18n="why.c2.title">Rõ ai nhận việc nào</h3>
+            <p data-i18n="why.c2.body">Việc nào đã có người nhận được ghi rõ, kèm câu họ đã nói. Không còn cảnh “tưởng anh ấy nhận rồi”.</p>
           </article>
           <article class="why-card">
             <span class="why-num">3</span>
-            <h3>Hỗ trợ đa nền tảng</h3>
-            <p>Lấy âm thanh trực tiếp từ hệ thống (loa và micro của máy), nên dùng được với Teams, Zoom, Meet hay họp trực tiếp.</p>
+            <h3 data-i18n="why.c3.title">Hỗ trợ đa nền tảng</h3>
+            <p data-i18n="why.c3.body">Lấy âm thanh trực tiếp từ hệ thống (loa và micro của máy), nên dùng được với Teams, Zoom, Meet hay họp trực tiếp.</p>
           </article>
           <article class="why-card">
             <span class="why-num">4</span>
-            <h3>Từ điển riêng dự án</h3>
-            <p>Tên module và thuật ngữ của dự án luôn được dịch đúng, buổi nào cũng vậy.</p>
+            <h3 data-i18n="why.c4.title">Từ điển riêng dự án</h3>
+            <p data-i18n="why.c4.body">Tên module và thuật ngữ của dự án luôn được dịch đúng, buổi nào cũng vậy.</p>
           </article>
         </div>
 
         <div class="trust">
-          <div class="trust-label">An toàn &amp; minh bạch</div>
+          <div class="trust-label" data-i18n="why.trust.label">An toàn &amp; minh bạch</div>
           <div class="trust-grid">
             <div class="trust-item">
               <span class="pp-icon" aria-hidden="true">⇄</span>
-              <div><b>API key chỉ nằm trên server</b><p>Âm thanh và văn bản đi qua server của nhóm tới các dịch vụ AI. API key của các dịch vụ đó chỉ nằm trên server, máy người dùng không giữ.</p></div>
+              <div data-i18n="why.trust.key"><b>API key chỉ nằm trên server</b><p>Âm thanh và văn bản đi qua server của nhóm tới các dịch vụ AI. API key của các dịch vụ đó chỉ nằm trên server, máy người dùng không giữ.</p></div>
             </div>
             <div class="trust-item">
               <span class="pp-icon" aria-hidden="true">✓</span>
-              <div><b>AI chỉ gợi ý, mình quyết định</b><p>Luôn xin đồng ý trước khi ghi âm. AI không tự gửi gì đi, và biên bản chỉ chốt khi bạn bấm xác nhận.</p></div>
+              <div data-i18n="why.trust.human"><b>AI chỉ gợi ý, mình quyết định</b><p>Luôn xin đồng ý trước khi ghi âm. AI không tự gửi gì đi, và biên bản chỉ chốt khi bạn bấm xác nhận.</p></div>
             </div>
           </div>
         </div>
@@ -256,35 +259,35 @@
     </section>
 
     <!-- ============ 11 · 04 USE CASES (1/3) ============ -->
-    <section class="slide" id="usecases" data-title="4.1 · Sẽ thế nào với Musubi?" data-section="usecases">
+    <section class="slide" id="usecases" data-title="4.1 · Sẽ thế nào với Musubi?" data-i18n-attr="data-title=slide.usecases" data-section="usecases">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num green">4.1</span>
           <div>
-            <h2>Sẽ thế nào với Musubi?</h2>
-            <p class="lead">Cùng một cuộc họp, hôm nay và khi có Musubi.</p>
+            <h2 data-i18n="uc.title">Sẽ thế nào với Musubi?</h2>
+            <p class="lead" data-i18n="uc.lead">Cùng một cuộc họp, hôm nay và khi có Musubi.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/claudina-fight.png" alt="" width="321" height="321" loading="lazy" decoding="async" draggable="false">
         </div>
 
         <div class="ba">
-          <div class="ba-head"><span></span><span class="ba-h ba-h-before">Hôm nay</span><span></span><span class="ba-h ba-h-after">Với Musubi</span></div>
-          <div class="ba-row"><span class="ba-label">Số cuộc họp</span><p class="ba-before">3–5 buổi mỗi tuần, mỗi dự án</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after">Vẫn vậy, nhưng không ai phải vừa nghe vừa ghi</p></div>
-          <div class="ba-row"><span class="ba-label">Trong họp</span><p class="ba-before">Phải dịch lại, hỏi lại nhiều lần, dễ nghe sót và dịch sai thuật ngữ</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after">Chữ và bản dịch hiện ngay trên màn hình; gặp từ lạ thì bấm vào xem giải thích</p></div>
-          <div class="ba-row"><span class="ba-label">Làm biên bản</span><p class="ba-before">30–60 phút sau mỗi buổi</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after">Khoảng 5 phút đọc lại biên bản Musubi đã viết sẵn</p></div>
-          <div class="ba-row"><span class="ba-label">Dev nắm thông tin</span><p class="ba-before">Có mặt trong họp nhưng không hiểu hết, phải hỏi lại comtor</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after">Tự nghe và hiểu trực tiếp nhờ phụ đề dịch, chỗ nào chưa rõ thì hỏi thẳng Musubi</p></div>
+          <div class="ba-head"><span></span><span class="ba-h ba-h-before" data-i18n="uc.before">Hôm nay</span><span></span><span class="ba-h ba-h-after" data-i18n="uc.after">Với Musubi</span></div>
+          <div class="ba-row"><span class="ba-label" data-i18n="uc.r1.label">Số cuộc họp</span><p class="ba-before" data-i18n="uc.r1.before">3–5 buổi mỗi tuần, mỗi dự án</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after" data-i18n="uc.r1.after">Vẫn vậy, nhưng không ai phải vừa nghe vừa ghi</p></div>
+          <div class="ba-row"><span class="ba-label" data-i18n="uc.r2.label">Trong họp</span><p class="ba-before" data-i18n="uc.r2.before">Phải dịch lại, hỏi lại nhiều lần, dễ nghe sót và dịch sai thuật ngữ</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after" data-i18n="uc.r2.after">Chữ và bản dịch hiện ngay trên màn hình; gặp từ lạ thì bấm vào xem giải thích</p></div>
+          <div class="ba-row"><span class="ba-label" data-i18n="uc.r3.label">Làm biên bản</span><p class="ba-before" data-i18n="uc.r3.before">30–60 phút sau mỗi buổi</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after" data-i18n="uc.r3.after">Khoảng 5 phút đọc lại biên bản Musubi đã viết sẵn</p></div>
+          <div class="ba-row"><span class="ba-label" data-i18n="uc.r4.label">Dev nắm thông tin</span><p class="ba-before" data-i18n="uc.r4.before">Có mặt trong họp nhưng không hiểu hết, phải hỏi lại comtor</p><span class="ba-arrow" aria-hidden="true">→</span><p class="ba-after" data-i18n="uc.r4.after">Tự nghe và hiểu trực tiếp nhờ phụ đề dịch, chỗ nào chưa rõ thì hỏi thẳng Musubi</p></div>
         </div>
       </div>
     </section>
 
     <!-- ============ 12 · 04 MEASURE (2/3) ============ -->
-    <section class="slide" id="usecases-measure" data-title="4.2 · Từ 30–60 phút còn 5 phút" data-section="usecases">
+    <section class="slide" id="usecases-measure" data-title="4.2 · Từ 30–60 phút còn 5 phút" data-i18n-attr="data-title=slide.measure" data-section="usecases">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num green">4.2</span>
           <div>
-            <h2>Từ 30–60 phút còn khoảng 5 phút</h2>
-            <p class="lead">Đây là mục tiêu nhóm đặt ra cho mỗi biên bản, và nhóm sẽ đo lại khi dùng thử.</p>
+            <h2 data-i18n="measure.title">Từ 30–60 phút còn khoảng 5 phút</h2>
+            <p class="lead" data-i18n="measure.lead">Đây là mục tiêu nhóm đặt ra cho mỗi biên bản, và nhóm sẽ đo lại khi dùng thử.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/consal-motivated.png" alt="" width="320" height="320" loading="lazy" decoding="async" draggable="false">
         </div>
@@ -292,37 +295,37 @@
         <div class="card measure">
           <div class="bars">
             <div class="bar-row">
-              <span>Tự viết biên bản</span>
+              <span data-i18n="measure.manual">Tự viết biên bản</span>
               <div class="bar"><div class="bar-fill red" data-width="100"></div></div>
               <em>30–60′</em>
             </div>
             <div class="bar-row">
-              <span>Musubi viết sẵn, mình đọc lại</span>
+              <span data-i18n="measure.musubi">Musubi viết sẵn, mình đọc lại</span>
               <div class="bar"><div class="bar-fill green" data-width="8"></div></div>
               <em>&lt; 5′</em>
             </div>
           </div>
 
           <div class="kpi-chips">
-            <span class="kpi-chips-label">Nhóm sẽ đo:</span>
-            <span class="chip">Bắt đúng việc cần làm</span>
-            <span class="chip">Bắt đúng quyết định</span>
-            <span class="chip">Đúng người phụ trách</span>
-            <span class="chip">Đúng hạn chót</span>
-            <span class="chip">Dẫn đúng câu đã nói ≥ 90%</span>
+            <span class="kpi-chips-label" data-i18n="measure.kpi">Nhóm sẽ đo:</span>
+            <span class="chip" data-i18n="measure.k1">Bắt đúng việc cần làm</span>
+            <span class="chip" data-i18n="measure.k2">Bắt đúng quyết định</span>
+            <span class="chip" data-i18n="measure.k3">Đúng người phụ trách</span>
+            <span class="chip" data-i18n="measure.k4">Đúng hạn chót</span>
+            <span class="chip" data-i18n="measure.k5">Dẫn đúng câu đã nói ≥ 90%</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ 13 · 04 MORE (3/3) ============ -->
-    <section class="slide" id="usecases-more" data-title="4.3 · Phỏng vấn & sự kiện" data-section="usecases">
+    <section class="slide" id="usecases-more" data-title="4.3 · Phỏng vấn & sự kiện" data-i18n-attr="data-title=slide.more" data-section="usecases">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num green">4.3</span>
           <div>
-            <h2>Mở rộng sang phỏng vấn và sự kiện</h2>
-            <p class="lead">Vẫn những tính năng đó, dùng được ở nhiều nơi khác.</p>
+            <h2 data-i18n="more.title">Mở rộng sang phỏng vấn và sự kiện</h2>
+            <p class="lead" data-i18n="more.lead">Vẫn những tính năng đó, dùng được ở nhiều nơi khác.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/inobe-hcmc.png" alt="" width="320" height="320" loading="lazy" decoding="async" draggable="false">
           <img class="head-mascot" src="mascot-assets/characters/inobe-tokyo.png" alt="" width="320" height="320" loading="lazy" decoding="async" draggable="false">
@@ -330,164 +333,123 @@
 
         <div class="usecase-ext grid-2">
           <article class="card usecase">
-            <span class="tag blue">Mở rộng</span>
-            <h3>Phỏng vấn</h3>
-            <p class="usecase-who">Phỏng vấn ứng viên, hoặc ngồi với khách để lấy yêu cầu.</p>
+            <span class="tag blue" data-i18n="more.tag">Mở rộng</span>
+            <h3 data-i18n="more.iv.title">Phỏng vấn</h3>
+            <p class="usecase-who" data-i18n="more.iv.who">Phỏng vấn ứng viên, hoặc ngồi với khách để lấy yêu cầu.</p>
             <ul class="plain-list">
-              <li>Musubi ghi lại cả buổi phỏng vấn thành chữ, tách rõ ai đang nói.</li>
-              <li>Người phỏng vấn chỉ cần tập trung hỏi, không phải cắm cúi ghi chép.</li>
-              <li>Xong buổi có sẵn file báo cáo phỏng vấn, mỗi ý bấm vào là xem lại câu gốc. Xuất ra để lưu hoặc gửi.</li>
-              <li>Luôn xin phép ứng viên trước khi ghi âm.</li>
+              <li data-i18n="more.iv.l1">Musubi ghi lại cả buổi phỏng vấn thành chữ, tách rõ ai đang nói.</li>
+              <li data-i18n="more.iv.l2">Người phỏng vấn chỉ cần tập trung hỏi, không phải cắm cúi ghi chép.</li>
+              <li data-i18n="more.iv.l3">Xong buổi có sẵn file báo cáo phỏng vấn, mỗi ý bấm vào là xem lại câu gốc. Xuất ra để lưu hoặc gửi.</li>
+              <li data-i18n="more.iv.l4">Luôn xin phép ứng viên trước khi ghi âm.</li>
             </ul>
           </article>
           <article class="card usecase">
-            <span class="tag blue">Mở rộng</span>
-            <h3>Sự kiện</h3>
-            <p class="usecase-who">Hội thảo, seminar, họp toàn công ty có người nghe đến từ nhiều quốc gia.</p>
+            <span class="tag blue" data-i18n="more.tag">Mở rộng</span>
+            <h3 data-i18n="more.ev.title">Sự kiện</h3>
+            <p class="usecase-who" data-i18n="more.ev.who">Hội thảo, seminar, họp toàn công ty có người nghe đến từ nhiều quốc gia.</p>
             <ul class="plain-list">
-              <li>Bản dịch hiện trực tiếp trên 2 màn hình cùng lúc, ai nghe cũng dễ theo dõi.</li>
-              <li>Người nghe đến từ nhiều quốc gia vẫn theo kịp nội dung bằng ngôn ngữ họ đọc được.</li>
-              <li>Gặp thuật ngữ chuyên ngành, bấm vào là có giải thích.</li>
-              <li>Kết thúc sự kiện có sẵn biên bản và danh sách việc cần theo dõi với đối tác.</li>
+              <li data-i18n="more.ev.l1">Bản dịch hiện trực tiếp trên 2 màn hình cùng lúc, ai nghe cũng dễ theo dõi.</li>
+              <li data-i18n="more.ev.l2">Người nghe đến từ nhiều quốc gia vẫn theo kịp nội dung bằng ngôn ngữ họ đọc được.</li>
+              <li data-i18n="more.ev.l3">Gặp thuật ngữ chuyên ngành, bấm vào là có giải thích.</li>
+              <li data-i18n="more.ev.l4">Kết thúc sự kiện có sẵn biên bản và danh sách việc cần theo dõi với đối tác.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ 14 · 05 PRICING (1/4) ============ -->
-    <section class="slide" id="pricing" data-title="5.1 · Chi phí bao nhiêu?" data-section="pricing">
+    <!-- ============ 14 · 05 PRICING (1/3) ============ -->
+    <section class="slide" id="pricing" data-title="5.1 · Chi phí bao nhiêu?" data-i18n-attr="data-title=slide.pricing" data-section="pricing">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num orange">5.1</span>
           <div>
-            <h2>Chi phí bao nhiêu?</h2>
-            <p class="lead">Mỗi giờ họp tốn khoảng một ly cà phê tiền AI.</p>
+            <h2 data-i18n="price.title">Chi phí bao nhiêu?</h2>
+            <p class="lead" data-i18n="price.lead">Mỗi giờ họp tốn tiền AI chưa bằng một ly cà phê.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/tutor-arm-up.png" alt="" width="183" height="201" loading="lazy" decoding="async" draggable="false">
         </div>
 
         <div class="price-hero card">
-          <div class="price-hero-num">≈ 11.000–15.000 ₫</div>
-          <div class="price-hero-label">tiền AI cho một giờ họp</div>
-          <div class="price-hero-sub">Chỉ ghi chữ: khoảng 11.000–13.000 ₫. Có dịch: khoảng 13.000–15.000 ₫</div>
+          <div class="price-hero-num" data-i18n="price.hero.num">≈ 3.600–8.300 ₫</div>
+          <div class="price-hero-label" data-i18n="price.hero.label">tiền AI cho một giờ họp</div>
+          <div class="price-hero-sub" data-i18n="price.hero.sub">Chỉ transcript: khoảng 3.600 ₫. Transcript &amp; Translate: khoảng 8.300 ₫</div>
           <div class="price-hero-src">
-            <span class="src src-list">Theo bảng giá ngày 14/10/2026</span>
-            <span class="src src-est">Tỷ giá 1 USD = 26.000 ₫</span>
+            <span class="src src-list" data-i18n="price.hero.src1">Theo bảng giá ngày 14/10/2026</span>
+            <span class="src src-est" data-i18n="price.hero.src2">Tỷ giá 1 USD = 26.000 ₫</span>
           </div>
         </div>
 
         <div class="price-parts grid-3">
           <div class="price-part">
-            <div class="pp-label">Ghi chữ và dịch</div>
-            <div class="pp-value">$0,12 – $0,18<small> / giờ</small></div>
-            <div class="pp-note">Soniox · từ chỉ ghi chữ đến có dịch</div>
+            <div class="pp-label" data-i18n="plan.translate">Transcript &amp; Translate</div>
+            <div class="pp-value" data-i18n="price.p1.value">$0,12 – $0,30<small> / giờ</small></div>
+            <div class="pp-note" data-i18n="price.p1.note">STT realtime · từ chỉ transcript đến có dịch</div>
           </div>
           <div class="price-part">
-            <div class="pp-label">Viết biên bản</div>
-            <div class="pp-value">$0,30 – $0,37<small> / giờ</small></div>
+            <div class="pp-label" data-i18n="price.p2.label">Viết biên bản</div>
+            <div class="pp-value" data-i18n="price.p2.value">~$0,01<small> / biên bản</small></div>
             <div class="pp-note">GPT-6 Sol</div>
           </div>
           <div class="price-part">
-            <div class="pp-label">Hỗ trợ trong họp</div>
-            <div class="pp-value">$0,01<small> / giờ</small></div>
+            <div class="pp-label" data-i18n="price.p3.label">Hỗ trợ trong họp</div>
+            <div class="pp-value" data-i18n="price.p3.value">$0,01<small> / giờ</small></div>
             <div class="pp-note">GPT-6 Luna</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 15 · 05 PRICING TABLE (2/4) ============ -->
-    <section class="slide" id="pricing-table" data-title="5.2 · Chi tiết chi phí" data-section="pricing">
+    <!-- ============ 15 · 05 PRICING TABLE (2/3) ============ -->
+    <section class="slide" id="pricing-table" data-title="5.2 · Chi tiết chi phí" data-i18n-attr="data-title=slide.pricingTable" data-section="pricing">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num orange">5.2</span>
           <div>
-            <h2>Chi tiết chi phí cho 1 giờ họp</h2>
+            <h2 data-i18n="ptable.title">Chi tiết chi phí cho 1 giờ họp</h2>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/tutor-front.png" alt="" width="230" height="280" loading="lazy" decoding="async" draggable="false">
         </div>
 
         <div class="table-wrap">
           <table class="price-table">
-            <tr><th>Khoản</th><th>Cách tính</th><th>Chỉ ghi chữ</th><th>Ghi chữ và dịch</th></tr>
+            <tr><th data-i18n="ptable.h.item">Khoản</th><th data-i18n="ptable.h.how">Cách tính</th><th data-i18n="plan.textonly">Chỉ transcript</th><th data-i18n="plan.translate">Transcript &amp; Translate</th></tr>
             <tr>
-              <td>Ghi chữ và dịch</td>
-              <td>Soniox stt-rt-v5: $0,12 mỗi giờ khi chỉ ghi chữ (đã gồm nhận diện người nói). Khi có dịch: $0,18 mỗi giờ</td>
-              <td class="num-cell">$0,12</td><td class="num-cell">$0,18</td>
+              <td data-i18n="plan.translate">Transcript &amp; Translate</td>
+              <td data-i18n="ptable.r1.how">Dịch vụ STT realtime: $0,12 mỗi giờ khi chỉ transcript (đã gồm nhận diện người nói). Khi có dịch: $0,30 mỗi giờ</td>
+              <td class="num-cell" data-i18n="ptable.r1.a">$0,12</td><td class="num-cell" data-i18n="ptable.r1.b">$0,30</td>
             </tr>
             <tr>
-              <td>Viết biên bản sau họp</td>
-              <td>GPT-6 Sol. AI đọc bản ghi cả buổi 4 lần (trích việc, làm rõ, tóm tắt, tìm từ mới) <span class="src src-est">ước tính từ prompt thật</span></td>
-              <td class="num-cell">$0,30–$0,37</td><td class="num-cell">$0,30–$0,37</td>
+              <td data-i18n="ptable.r2.item">Viết biên bản sau họp</td>
+              <td data-i18n="ptable.r2.how">GPT-6 Sol. AI đọc bản ghi cả buổi để trích việc, làm rõ, tóm tắt và tìm từ mới: khoảng $0,01 mỗi biên bản <span class="src src-est">ước tính</span></td>
+              <td class="num-cell" data-i18n="ptable.r2.a">~$0,01</td><td class="num-cell" data-i18n="ptable.r2.a">~$0,01</td>
             </tr>
             <tr>
-              <td>Hỗ trợ trong họp</td>
-              <td>GPT-6 Luna. Giải thích từ lạ, trả lời câu hỏi về cuộc họp: khoảng 20 lần bấm mỗi giờ <span class="src src-est">giả định</span></td>
-              <td class="num-cell">$0,01</td><td class="num-cell">$0,01</td>
+              <td data-i18n="price.p3.label">Hỗ trợ trong họp</td>
+              <td data-i18n="ptable.r3.how">GPT-6 Luna. Giải thích từ lạ, trả lời câu hỏi về cuộc họp: khoảng 20 lần bấm mỗi giờ <span class="src src-est">giả định</span></td>
+              <td class="num-cell" data-i18n="ptable.r3.a">$0,01</td><td class="num-cell" data-i18n="ptable.r3.a">$0,01</td>
             </tr>
             <tr class="total-row">
-              <td>Tổng mỗi giờ họp</td><td></td>
-              <td class="num-cell">≈ $0,43–$0,50 ≈ 11.000–13.000 ₫</td><td class="num-cell">≈ $0,49–$0,56 ≈ 13.000–15.000 ₫</td>
+              <td data-i18n="ptable.total">Tổng mỗi giờ họp</td><td></td>
+              <td class="num-cell" data-i18n="ptable.total.a">≈ $0,14 ≈ 3.600 ₫</td><td class="num-cell" data-i18n="ptable.total.b">≈ $0,32 ≈ 8.300 ₫</td>
             </tr>
           </table>
         </div>
         <ul class="plain-list table-notes">
-          <li>Biên bản dùng GPT-6 Sol ($2 vào / $10 ra mỗi 1 triệu token). Hỗ trợ trong họp dùng GPT-6 Luna ($0,10 / $0,50).</li>
-          <li>Soniox công bố $0,12/giờ khi ghi chữ và $0,18/giờ khi dịch sang một ngôn ngữ. Số token của biên bản là ước tính từ prompt thật, chưa đo trên hóa đơn, xem <a href="#appendix-cost" class="inline-link">Phụ lục</a>.</li>
+          <li data-i18n="ptable.note1">Biên bản dùng GPT-6 Sol ($2 vào / $10 ra mỗi 1 triệu token). Hỗ trợ trong họp dùng GPT-6 Luna ($0,10 / $0,50).</li>
+          <li data-i18n="ptable.note2">Dịch vụ STT realtime công bố $0,12/giờ khi transcript và $0,30/giờ khi dịch sang một ngôn ngữ. Số token của biên bản là ước tính từ prompt thật, chưa đo trên hóa đơn, xem <a href="#appendix-cost" class="inline-link">Phụ lục</a>.</li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ 16 · 05 PEOPLE (3/4) ============ -->
-    <section class="slide" id="pricing-people" data-title="5.3 · Nhân sự & lợi nhuận" data-section="pricing">
+    <!-- ============ 16 · 05 ROI (3/3) ============ -->
+    <section class="slide" id="roi" data-title="5.3 · ROI: Tiết kiệm được bao nhiêu?" data-i18n-attr="data-title=slide.roi" data-section="pricing">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num orange">5.3</span>
           <div>
-            <h2>Cần bao nhiêu người, và có lãi không?</h2>
-            <p class="lead">Nhân sự tính theo công số (MD, ngày công), không tính lương trực tiếp.</p>
-          </div>
-          <img class="head-mascot" src="mascot-assets/characters/ranma-front.png" alt="" width="268" height="468" loading="lazy" decoding="async" draggable="false">
-        </div>
-
-        <div class="people-grid">
-          <div class="staff">
-            <article class="card staff-card">
-              <h3>Phần đã làm</h3>
-              <p>3 thành viên đã làm xong tài liệu thiết kế, máy chủ và ứng dụng trong 4 tuần hackathon. Phần này <b>không tính</b> vào chi phí dùng thử.</p>
-            </article>
-            <article class="card staff-card">
-              <h3>Nhân sự ≈ 4 MD mỗi tháng</h3>
-              <p>Chỉ để cập nhật sản phẩm: mỗi tuần 1 người làm 1 ngày. Sản phẩm đã xây xong nên không cần đội riêng. Dùng thử 3 tháng ≈ 12 MD.</p>
-            </article>
-            <article class="card staff-card">
-              <h3>Server ≈ $12–24 mỗi tháng</h3>
-              <p>Một server nhỏ chạy backend của nhóm. Chi phí cố định.</p>
-            </article>
-          </div>
-
-          <div class="card commercial">
-            <span class="src src-plan">Đề xuất</span>
-            <h3>Nếu bán ra ngoài</h3>
-            <ul class="plain-list">
-              <li>Bán theo giờ họp: <b>120.000 ₫/giờ</b>, lãi <b>88–91%</b> trên mỗi giờ (tính trên tiền AI, chưa gồm chi phí vận hành). Hoặc bán theo người dùng: <b>300.000 ₫ mỗi người mỗi tháng</b>.</li>
-              <li>Khách hàng hướng tới: các công ty phần mềm nhận dự án offshore từ nước ngoài.</li>
-              <li>Chỉ cần khoảng 35–36 giờ họp mỗi tháng là đủ bù chi phí vận hành (4 MD quy theo 100.000 ₫ một giờ làm việc, cộng server).</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 17 · 05 ROI (4/4) ============ -->
-    <section class="slide" id="roi" data-title="5.4 · Tiết kiệm được bao nhiêu?" data-section="pricing">
-      <div class="slide-inner">
-        <div class="slide-head">
-          <span class="num orange">5.4</span>
-          <div>
-            <h2>Công ty mình tiết kiệm được bao nhiêu?</h2>
-            <p class="lead">Kéo thử các con số theo thực tế của anh chị.</p>
+            <h2 data-i18n="roi.title">ROI: Công ty mình tiết kiệm được bao nhiêu?</h2>
+            <p class="lead" data-i18n="roi.lead">Kéo thử các con số theo thực tế của anh chị.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/transmaru-front.png" alt="" width="286" height="364" loading="lazy" decoding="async" draggable="false">
         </div>
@@ -495,73 +457,65 @@
         <div class="roi card">
           <div class="roi-inputs">
             <div class="roi-field">
-              <label for="roi-perday">Mỗi ngày công ty có mấy cuộc họp nhiều ngôn ngữ?</label>
+              <label for="roi-perday" data-i18n="roi.perday">Mỗi ngày công ty có mấy cuộc họp nhiều ngôn ngữ?</label>
               <div class="roi-control">
                 <input type="range" id="roi-perday" min="1" max="50" step="1" value="10">
                 <output for="roi-perday" id="roi-perday-val">10</output>
               </div>
             </div>
             <div class="roi-field">
-              <label for="roi-duration">Mỗi buổi họp dài bao lâu?</label>
+              <label for="roi-duration" data-i18n="roi.duration">Mỗi buổi họp dài bao lâu?</label>
               <div class="roi-control">
                 <input type="range" id="roi-duration" min="15" max="180" step="15" value="60">
                 <output for="roi-duration" id="roi-duration-val">60 phút</output>
               </div>
             </div>
             <div class="roi-field">
-              <label for="roi-writing">Một người viết biên bản mất bao lâu?</label>
+              <label for="roi-writing" data-i18n="roi.writing">Một người viết biên bản mất bao lâu?</label>
               <div class="roi-control">
                 <input type="range" id="roi-writing" min="10" max="120" step="5" value="45">
                 <output for="roi-writing" id="roi-writing-val">45 phút</output>
               </div>
             </div>
             <div class="roi-field">
-              <label for="roi-skip">Số người khỏi phải dự họp vì đã đọc tóm tắt</label>
-              <div class="roi-control">
-                <input type="range" id="roi-skip" min="0" max="3" step="0.1" value="0.3">
-                <output for="roi-skip" id="roi-skip-val">0,3 người</output>
-              </div>
-            </div>
-            <div class="roi-field">
-              <label for="roi-hourly">Một giờ làm việc tính bao nhiêu tiền?</label>
+              <label for="roi-hourly" data-i18n="roi.hourly">Một giờ làm việc tính bao nhiêu tiền?</label>
               <div class="roi-control">
                 <input type="range" id="roi-hourly" min="50000" max="500000" step="10000" value="100000">
                 <output for="roi-hourly" id="roi-hourly-val">100.000 ₫</output>
               </div>
             </div>
             <fieldset class="roi-plan">
-              <legend>Gói AI</legend>
-              <label><input type="radio" name="roi-plan" value="translate" checked> Ghi chữ và dịch · 15.000 ₫/giờ (mức cao)</label>
-              <label><input type="radio" name="roi-plan" value="textonly"> Chỉ ghi chữ · 13.000 ₫/giờ (mức cao)</label>
+              <legend data-i18n="roi.plan">Gói AI</legend>
+              <label><input type="radio" name="roi-plan" value="translate" checked> <span data-i18n="roi.plan.translate">Transcript &amp; Translate · 8.300 ₫/giờ</span></label>
+              <label><input type="radio" name="roi-plan" value="textonly"> <span data-i18n="roi.plan.textonly">Chỉ transcript · 3.600 ₫/giờ</span></label>
             </fieldset>
           </div>
 
           <div class="roi-side">
             <div class="roi-results" aria-live="polite">
               <div class="roi-result">
-                <div class="roi-label">Giờ làm việc tiết kiệm mỗi tháng</div>
-                <div class="roi-value" id="roi-hours">212,7 giờ</div>
+                <div class="roi-label" data-i18n="roi.r.hours">Giờ làm việc tiết kiệm mỗi tháng</div>
+                <div class="roi-value" id="roi-hours">146,7 giờ</div>
               </div>
               <div class="roi-result">
-                <div class="roi-label">Tiền AI mỗi tháng</div>
-                <div class="roi-value" id="roi-aicost">3,3 triệu ₫</div>
+                <div class="roi-label" data-i18n="roi.r.ai">Tiền AI mỗi tháng</div>
+                <div class="roi-value" id="roi-aicost">1,1 triệu ₫</div>
               </div>
               <div class="roi-result roi-main">
-                <div class="roi-label">Tiết kiệm mỗi tháng <small>(đã trừ mọi chi phí)</small></div>
-                <div class="roi-value" id="roi-net">14,1 triệu ₫</div>
-                <div class="roi-subline">Nếu chỉ tính thời gian viết biên bản: <span id="roi-net-minutes">7,5 triệu ₫</span></div>
+                <div class="roi-label" data-i18n="roi.r.net">Tiết kiệm mỗi tháng <small>(đã trừ mọi chi phí)</small></div>
+                <div class="roi-value" id="roi-net">9,7 triệu ₫</div>
               </div>
               <div class="roi-result">
-                <div class="roi-label">Bao lâu thì hoàn lại chi phí dùng thử</div>
-                <div class="roi-value" id="roi-payback">0,8 tháng</div>
+                <div class="roi-label" data-i18n="roi.r.payback">Bao lâu thì hoàn lại chi phí dùng thử</div>
+                <div class="roi-value" id="roi-payback">1,2 tháng</div>
               </div>
               <div class="roi-result">
-                <div class="roi-label">Từ bao nhiêu cuộc họp mỗi ngày thì có lãi</div>
+                <div class="roi-label" data-i18n="roi.r.breakeven">Từ bao nhiêu cuộc họp mỗi ngày thì có lãi</div>
                 <div class="roi-value" id="roi-breakeven">≥ 3 cuộc họp/ngày</div>
               </div>
             </div>
 
-            <p class="roi-note">
+            <p class="roi-note" data-i18n="roi.note">
               Tính 22 ngày làm việc mỗi tháng, mỗi biên bản mất 5 phút xem lại. Vận hành gồm 4 ngày công mỗi tháng (quy theo giá một giờ ở trên) và server $24; chi phí dùng thử bằng 3 tháng vận hành. Chưa tính những thứ khó quy ra tiền: bớt làm lại vì hiểu sai, giữ được niềm tin của khách, comtor đỡ vất vả.
             </p>
           </div>
@@ -569,93 +523,93 @@
       </div>
     </section>
 
-    <!-- ============ 18 · 06 ROADMAP (1/2) ============ -->
-    <section class="slide" id="roadmap" data-title="6.1 · Road Map" data-section="roadmap">
+    <!-- ============ 17 · 06 ROADMAP (1/2) ============ -->
+    <section class="slide" id="roadmap" data-title="6.1 · Road Map" data-i18n-attr="data-title=slide.roadmap" data-section="roadmap">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num purple">6.1</span>
           <div>
-            <h2>Road Map</h2>
-            <p class="lead">Xong cuộc thi, nhóm đưa Musubi vào dự án thật trước, rồi kết nối thêm với các công cụ công ty đang dùng.</p>
+            <h2 data-i18n="roadmap.title">Road Map</h2>
+            <p class="lead" data-i18n="roadmap.lead">Xong cuộc thi, nhóm đưa Musubi vào dự án thật trước, rồi kết nối thêm với các công cụ công ty đang dùng.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/ranma-run.png" alt="" width="292" height="333" loading="lazy" decoding="async" draggable="false">
         </div>
 
-        <h3 class="sub">Chặng 0: Hackathon</h3>
+        <h3 class="sub" data-i18n="roadmap.s0">Chặng 0: Hackathon</h3>
         <div class="timeline timeline-row">
           <div class="tl-item done">
             <div class="tl-date">28/09</div>
-            <div class="tl-body">Chốt thiết kế</div>
+            <div class="tl-body" data-i18n="roadmap.t1">Chốt thiết kế</div>
           </div>
           <div class="tl-item done">
             <div class="tl-date">10/2026</div>
-            <div class="tl-body">Build MVP</div>
+            <div class="tl-body" data-i18n="roadmap.t2">Build MVP</div>
           </div>
           <div class="tl-item">
             <div class="tl-date">16/10</div>
-            <div class="tl-body">Sơ duyệt</div>
+            <div class="tl-body" data-i18n="roadmap.t3">Sơ duyệt</div>
           </div>
           <div class="tl-item final">
             <div class="tl-date">24/10</div>
-            <div class="tl-body">Chung kết</div>
+            <div class="tl-body" data-i18n="roadmap.t4">Chung kết</div>
           </div>
         </div>
 
-        <h3 class="sub">Chặng 1: Dùng thử trong công ty</h3>
+        <h3 class="sub" data-i18n="roadmap.s1">Chặng 1: Dùng thử trong công ty</h3>
         <div class="card pilot">
           <div class="pilot-when">Q4/2026 – Q1/2027</div>
           <ul class="plain-list">
-            <li>Dùng thật trên 2–3 dự án có họp nhiều ngôn ngữ.</li>
-            <li>Đo bằng số thật: thời gian làm biên bản, ghi đúng việc, đúng người, đúng hạn.</li>
-            <li>Nghe góp ý của comtor, BrSE và dev rồi mới quyết định bước tiếp.</li>
+            <li data-i18n="roadmap.p1">Dùng thật trên 2–3 dự án có họp nhiều ngôn ngữ.</li>
+            <li data-i18n="roadmap.p2">Đo bằng số thật: thời gian làm biên bản, ghi đúng việc, đúng người, đúng hạn.</li>
+            <li data-i18n="roadmap.p3">Nghe góp ý của comtor, BrSE và dev rồi mới quyết định bước tiếp.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ 19 · 06 ROADMAP API (2/2) ============ -->
-    <section class="slide" id="roadmap-api" data-title="6.2 · Mở rộng bằng API" data-section="roadmap">
+    <!-- ============ 18 · 06 ROADMAP API (2/2) ============ -->
+    <section class="slide" id="roadmap-api" data-title="6.2 · Mở rộng bằng API" data-i18n-attr="data-title=slide.roadmapApi" data-section="roadmap">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num purple">6.2</span>
           <div>
-            <h2>Chặng 2: Mở rộng bằng API</h2>
-            <p class="lead">Nhóm dùng dịch vụ AI bên ngoài để có chất lượng tốt nhất ngay, và kết nối Musubi với các công cụ công ty đang dùng.</p>
+            <h2 data-i18n="api.title">Chặng 2: Mở rộng bằng API</h2>
+            <p class="lead" data-i18n="api.lead">Nhóm dùng dịch vụ AI bên ngoài để có chất lượng tốt nhất ngay, và kết nối Musubi với các công cụ công ty đang dùng.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/inobe-upward.png" alt="" width="173" height="186" loading="lazy" decoding="async" draggable="false">
         </div>
 
         <div class="grid-2">
           <div class="card feature">
-            <h3>Break down và tạo task</h3>
-            <p>Hỗ trợ chia nhỏ (break down) việc cần làm và tạo task trên Backlog, GitLab và các nền tảng quản lý công việc khác.</p>
+            <h3 data-i18n="api.f1.title">Break down và tạo task</h3>
+            <p data-i18n="api.f1.body">Hỗ trợ chia nhỏ (break down) việc cần làm và tạo task trên Backlog, GitLab và các nền tảng quản lý công việc khác.</p>
           </div>
           <div class="card feature">
-            <h3>Kết nối hệ thống khác</h3>
-            <p>Phần mềm khác của công ty kết nối vào Musubi qua API.</p>
+            <h3 data-i18n="api.f2.title">Kết nối hệ thống khác</h3>
+            <p data-i18n="api.f2.body">Phần mềm khác của công ty kết nối vào Musubi qua API.</p>
           </div>
           <div class="card feature">
-            <h3>Mô hình kinh doanh</h3>
-            <p>Bán account, bán license hoặc bán app.</p>
+            <h3 data-i18n="api.f3.title">Mô hình kinh doanh</h3>
+            <p data-i18n="api.f3.body">Bán account, bán license hoặc bán app.</p>
           </div>
           <div class="card feature">
-            <h3>Quản lý token, doanh thu, chi phí</h3>
-            <p>Hệ thống theo dõi lượng token sử dụng, doanh thu và chi phí của app.</p>
+            <h3 data-i18n="api.f4.title">Quản lý token, doanh thu, chi phí</h3>
+            <p data-i18n="api.f4.body">Hệ thống theo dõi lượng token sử dụng, doanh thu và chi phí của app.</p>
           </div>
         </div>
 
-        <p class="honest-note">Các tích hợp này là kế hoạch, chưa có trong app hiện tại.</p>
+        <p class="honest-note" data-i18n="api.note">Các tích hợp này là kế hoạch, chưa có trong app hiện tại.</p>
       </div>
     </section>
 
-    <!-- ============ 20 · 07 CONTACT ============ -->
-    <section class="slide" id="contact" data-title="07 · Lời kết" data-section="contact">
+    <!-- ============ 19 · 07 CONTACT ============ -->
+    <section class="slide" id="contact" data-title="07 · Lời kết" data-i18n-attr="data-title=slide.contact" data-section="contact">
       <div class="slide-inner">
         <div class="slide-head">
           <span class="num pink">07</span>
           <div>
-            <h2>Nhóm chưa biết hết khó khăn của anh chị.</h2>
-            <p class="lead">Nếu anh chị thấy Musubi có ích, hãy liên hệ để cùng thử trên dự án thật. Nhóm rất mong được lắng nghe.</p>
+            <h2 data-i18n="contact.title">Nhóm chưa biết hết khó khăn của anh chị.</h2>
+            <p class="lead" data-i18n="contact.lead">Nếu anh chị thấy Musubi có ích, hãy liên hệ để cùng thử trên dự án thật. Nhóm rất mong được lắng nghe.</p>
           </div>
           <img class="head-mascot head-banner" src="mascot-assets/characters/group-all.jpg" alt="" width="694" height="217" loading="lazy" decoding="async" draggable="false">
         </div>
@@ -663,141 +617,141 @@
         <div class="cta-grid grid-3">
           <article class="card cta-card">
             <span class="cta-num">1</span>
-            <h3>Mời nhóm dự một buổi họp</h3>
-            <p>Để Musubi thử trên một cuộc họp thật của anh chị.</p>
+            <h3 data-i18n="contact.c1.title">Mời nhóm dự một buổi họp</h3>
+            <p data-i18n="contact.c1.body">Để Musubi thử trên một cuộc họp thật của anh chị.</p>
           </article>
           <article class="card cta-card">
             <span class="cta-num">2</span>
-            <h3>Gửi nhóm một biên bản cũ</h3>
-            <p>Để nhóm so sánh thời gian và độ chính xác bằng số liệu thật.</p>
+            <h3 data-i18n="contact.c2.title">Gửi nhóm một biên bản cũ</h3>
+            <p data-i18n="contact.c2.body">Để nhóm so sánh thời gian và độ chính xác bằng số liệu thật.</p>
           </article>
           <article class="card cta-card">
             <span class="cta-num">3</span>
-            <h3>Kể cho nhóm nghe</h3>
-            <p>Điều gì trong cuộc họp làm anh chị mất thời gian nhất?</p>
+            <h3 data-i18n="contact.c3.title">Kể cho nhóm nghe</h3>
+            <p data-i18n="contact.c3.body">Điều gì trong cuộc họp làm anh chị mất thời gian nhất?</p>
           </article>
         </div>
 
         <div class="team">
-          <div class="member"><div class="avatar">NN</div><div><h3>Nguyễn Văn Nghị</h3><p>Thành viên</p></div></div>
-          <div class="member"><div class="avatar">VĐ</div><div><h3>Võ Quốc Đạt</h3><p>Thành viên</p></div></div>
-          <div class="member"><div class="avatar">TN</div><div><h3>Trần Thanh Nhã</h3><p>Thành viên</p></div></div>
+          <div class="member"><div class="avatar">NN</div><div><h3>Nguyễn Văn Nghị</h3><p data-i18n="contact.member">Thành viên</p></div></div>
+          <div class="member"><div class="avatar">VĐ</div><div><h3>Võ Quốc Đạt</h3><p data-i18n="contact.member">Thành viên</p></div></div>
+          <div class="member"><div class="avatar">TN</div><div><h3>Trần Thanh Nhã</h3><p data-i18n="contact.member">Thành viên</p></div></div>
         </div>
 
-        <p class="contact-line"><span class="mentors-label">Người hướng dẫn:</span> Phạm Lê Phong · Đặng Tân Phú <span class="sep">—</span> Nhắn Teams cho <b>Nghị</b>, <b>Đạt</b> hoặc <b>Nhã</b></p>
+        <p class="contact-line" data-i18n="contact.line"><span class="mentors-label">Người hướng dẫn:</span> Phạm Lê Phong · Đặng Tân Phú <span class="sep">—</span> Nhắn Teams cho <b>Nghị</b>, <b>Đạt</b> hoặc <b>Nhã</b></p>
       </div>
     </section>
 
-    <!-- ============ 21 · APPENDIX ============ -->
-    <section class="slide slide-free" id="appendix" data-title="Phụ lục kỹ thuật" data-section="appendix">
+    <!-- ============ 20 · APPENDIX ============ -->
+    <section class="slide slide-free" id="appendix" data-title="Phụ lục kỹ thuật" data-i18n-attr="data-title=slide.appendix" data-section="appendix">
       <div class="slide-inner">
         <div class="slide-head">
-          <span class="num purple">PL</span>
+          <span class="num purple" data-i18n="ap.num">PL</span>
           <div>
-            <h2>Phụ lục kỹ thuật</h2>
-            <p class="lead">Chi tiết cho người muốn đi sâu. Nội dung mô tả những gì đã có trong code (<code>apps/server</code>, <code>apps/desktop</code>). Phần nào là kế hoạch đều ghi rõ.</p>
+            <h2 data-i18n="ap.title">Phụ lục kỹ thuật</h2>
+            <p class="lead" data-i18n="ap.lead">Chi tiết cho người muốn đi sâu. Nội dung mô tả những gì đã có trong code (<code>apps/server</code>, <code>apps/desktop</code>). Phần nào là kế hoạch đều ghi rõ.</p>
           </div>
           <img class="head-mascot" src="mascot-assets/characters/tutor-roger.png" alt="" width="321" height="321" loading="lazy" decoding="async" draggable="false">
         </div>
 
         <details class="fold">
-          <summary>A. Ứng dụng AI</summary>
-          <p class="fold-lead">Nguyên tắc: AI chỉ trả về JSON đề xuất. Backend kiểm tra, con người xác nhận cuối cùng.</p>
+          <summary data-i18n="ap.a.summary">A. Ứng dụng AI</summary>
+          <p class="fold-lead" data-i18n="ap.a.lead">Nguyên tắc: AI chỉ trả về JSON đề xuất. Backend kiểm tra, con người xác nhận cuối cùng.</p>
           <div class="grid-3">
             <article class="card ai-card">
               <span class="tag purple">AI #1</span>
-              <h3>Nhận việc hay chưa</h3>
-              <p>“やります” có thể là “tôi sẽ làm” hoặc chỉ mô tả. LLM đọc ngữ cảnh: ai nói, nói với ai, có deliverable không.</p>
+              <h3 data-i18n="ap.a.c1.title">Nhận việc hay chưa</h3>
+              <p data-i18n="ap.a.c1.body">“やります” có thể là “tôi sẽ làm” hoặc chỉ mô tả. LLM đọc ngữ cảnh: ai nói, nói với ai, có deliverable không.</p>
             </article>
             <article class="card ai-card">
               <span class="tag purple">AI #2</span>
-              <h3>Phát hiện mơ hồ</h3>
-              <p>Gán mã lý do: <code>DATE_BOUNDARY</code>, <code>REFERENT</code>, <code>SCOPE_EXTENT</code>. Rule-based không làm được việc này.</p>
+              <h3 data-i18n="ap.a.c2.title">Phát hiện mơ hồ</h3>
+              <p data-i18n="ap.a.c2.body">Gán mã lý do: <code>DATE_BOUNDARY</code>, <code>REFERENT</code>, <code>SCOPE_EXTENT</code>. Rule-based không làm được việc này.</p>
             </article>
             <article class="card ai-card">
               <span class="tag purple">AI #3</span>
-              <h3>Hiểu thuật ngữ dự án</h3>
-              <p>Phân biệt từ chung (giải thích được) và tên riêng dự án (không bịa nghĩa). “Red Mine” là Redmine.</p>
+              <h3 data-i18n="ap.a.c3.title">Hiểu thuật ngữ dự án</h3>
+              <p data-i18n="ap.a.c3.body">Phân biệt từ chung (giải thích được) và tên riêng dự án (không bịa nghĩa). “Red Mine” là Redmine.</p>
             </article>
           </div>
 
           <div class="tabs">
             <div class="tab-buttons">
-              <button class="tab-btn active" data-tab="live">Trong họp · ưu tiên tốc độ</button>
-              <button class="tab-btn" data-tab="post">Sau họp · ưu tiên độ chính xác</button>
+              <button class="tab-btn active" data-tab="live" data-i18n="ap.a.tab.live">Trong họp · ưu tiên tốc độ</button>
+              <button class="tab-btn" data-tab="post" data-i18n="ap.a.tab.post">Sau họp · ưu tiên độ chính xác</button>
             </div>
             <div class="tab-panel active" id="tab-live">
               <div class="table-wrap">
                 <table>
-                  <tr><th>Task LLM</th><th>Mục đích</th><th>Ngưỡng</th></tr>
-                  <tr><td><code>term_explain</code></td><td>Giải thích từ lạ (GENERAL / PROJECT_SPECIFIC / UNCLEAR)</td><td>&lt; 2,5 s</td></tr>
-                  <tr><td><code>followup_suggest</code></td><td>Gợi ý 1–3 câu hỏi tiếp theo, chỉ người bấm thấy</td><td>&lt; 2,5 s</td></tr>
+                  <tr><th>Task LLM</th><th data-i18n="ap.a.h.purpose">Mục đích</th><th data-i18n="ap.a.h.limit">Ngưỡng</th></tr>
+                  <tr><td><code>term_explain</code></td><td data-i18n="ap.a.live1">Giải thích từ lạ (GENERAL / PROJECT_SPECIFIC / UNCLEAR)</td><td data-i18n="ap.a.lat">&lt; 2,5 s</td></tr>
+                  <tr><td><code>followup_suggest</code></td><td data-i18n="ap.a.live2">Gợi ý 1–3 câu hỏi tiếp theo, chỉ người bấm thấy</td><td data-i18n="ap.a.lat">&lt; 2,5 s</td></tr>
                 </table>
               </div>
             </div>
             <div class="tab-panel" id="tab-post">
               <div class="table-wrap">
                 <table>
-                  <tr><th>Task LLM</th><th>Mục đích</th><th>Ưu tiên</th></tr>
-                  <tr><td><code>minutes_extract</code></td><td>Trích TODO / Decision / Issue</td><td>Chính xác</td></tr>
-                  <tr><td><code>minutes_clarify</code></td><td>Chỗ cần làm rõ</td><td>Chính xác</td></tr>
-                  <tr><td><code>minutes_summary</code></td><td>Tóm tắt thảo luận</td><td>Chính xác</td></tr>
-                  <tr><td><code>glossary_detect</code></td><td>Phát hiện từ mới cho từ điển</td><td>Chính xác</td></tr>
+                  <tr><th>Task LLM</th><th data-i18n="ap.a.h.purpose">Mục đích</th><th data-i18n="ap.a.h.priority">Ưu tiên</th></tr>
+                  <tr><td><code>minutes_extract</code></td><td data-i18n="ap.a.post1">Trích TODO / Decision / Issue</td><td data-i18n="ap.a.accuracy">Chính xác</td></tr>
+                  <tr><td><code>minutes_clarify</code></td><td data-i18n="ap.a.post2">Chỗ cần làm rõ</td><td data-i18n="ap.a.accuracy">Chính xác</td></tr>
+                  <tr><td><code>minutes_summary</code></td><td data-i18n="ap.a.post3">Tóm tắt thảo luận</td><td data-i18n="ap.a.accuracy">Chính xác</td></tr>
+                  <tr><td><code>glossary_detect</code></td><td data-i18n="ap.a.post4">Phát hiện từ mới cho từ điển</td><td data-i18n="ap.a.accuracy">Chính xác</td></tr>
                 </table>
               </div>
             </div>
           </div>
 
-          <div class="highlight card">
+          <div class="highlight card" data-i18n="ap.a.bench">
             <b>Chọn model bằng benchmark</b> <span class="src src-plan">Kế hoạch</span>: mỗi model chạy 3 lần, temperature = 0, trên dữ liệu mẫu của đề bài.
             Gọi qua một lớp gateway chung, đổi model chỉ bằng cấu hình.
           </div>
         </details>
 
         <details class="fold">
-          <summary>B. Luồng dữ liệu &amp; 6 tác vụ LLM</summary>
-          <h4 class="fold-sub">Luồng dữ liệu</h4>
+          <summary data-i18n="ap.b.summary">B. Luồng dữ liệu &amp; 6 tác vụ LLM</summary>
+          <h4 class="fold-sub" data-i18n="ap.b.flow">Luồng dữ liệu</h4>
           <div class="flow">
-            <div class="flow-node"><b>Desktop</b><small>Thu mic và âm thanh máy (Electron), gửi chunk 50–100 ms</small></div>
+            <div class="flow-node" data-i18n="ap.b.n1"><b>Desktop</b><small>Thu mic và âm thanh máy (Electron), gửi chunk 50–100 ms</small></div>
             <span class="flow-arrow">→</span>
-            <div class="flow-node"><b>STT realtime</b><small>Soniox stt-rt-v5, tách lượt nói và người nói</small></div>
+            <div class="flow-node" data-i18n="ap.b.n2"><b>STT realtime</b><small>Streaming STT, tách lượt nói và người nói</small></div>
             <span class="flow-arrow">→</span>
-            <div class="flow-node"><b>Dịch</b><small>Dịch ngay trong kết nối Soniox: bản tạm thời khi đang nói, bản chốt khi câu kết thúc</small></div>
+            <div class="flow-node" data-i18n="ap.b.n3"><b>Dịch</b><small>Dịch ngay trong kết nối STT realtime: bản tạm thời khi đang nói, bản chốt khi câu kết thúc</small></div>
             <span class="flow-arrow">→</span>
-            <div class="flow-node ai"><b>LLM · trong họp</b><small>term_explain, followup_suggest (chỉ khi người dùng bấm)</small></div>
+            <div class="flow-node ai" data-i18n="ap.b.n4"><b>LLM · trong họp</b><small>term_explain, followup_suggest (chỉ khi người dùng bấm)</small></div>
           </div>
           <div class="flow flow-second">
-            <div class="flow-node"><b>Lưu</b><small>Turn, speaker, snapshot từ điển lúc bắt đầu họp</small></div>
+            <div class="flow-node" data-i18n="ap.b.n5"><b>Lưu</b><small>Turn, speaker, snapshot từ điển lúc bắt đầu họp</small></div>
             <span class="flow-arrow">→</span>
-            <div class="flow-node ai"><b>LLM · biên bản</b><small>minutes_extract → minutes_clarify → minutes_summary</small></div>
+            <div class="flow-node ai" data-i18n="ap.b.n6"><b>LLM · biên bản</b><small>minutes_extract → minutes_clarify → minutes_summary</small></div>
             <span class="flow-arrow">→</span>
-            <div class="flow-node"><b>Validator</b><small>Kiểm tra evidence, thành viên, ngày, giới hạn số mục</small></div>
+            <div class="flow-node" data-i18n="ap.b.n7"><b>Validator</b><small>Kiểm tra evidence, thành viên, ngày, giới hạn số mục</small></div>
             <span class="flow-arrow">→</span>
-            <div class="flow-node"><b>Người xem lại</b><small>Sửa, xem câu gốc, rồi mới hoàn tất</small></div>
+            <div class="flow-node" data-i18n="ap.b.n8"><b>Người xem lại</b><small>Sửa, xem câu gốc, rồi mới hoàn tất</small></div>
           </div>
-          <p class="caption">Màu tím là bước dùng LLM. Biên bản do AI tạo luôn ở trạng thái bản nháp (AI_DRAFT), người xem lại phải xác nhận.</p>
+          <p class="caption" data-i18n="ap.b.caption">Màu tím là bước dùng LLM. Biên bản do AI tạo luôn ở trạng thái bản nháp (AI_DRAFT), người xem lại phải xác nhận.</p>
 
-          <h4 class="fold-sub">Sáu tác vụ LLM</h4>
+          <h4 class="fold-sub" data-i18n="ap.b.tasks">Sáu tác vụ LLM</h4>
           <div class="table-wrap">
             <table>
-              <tr><th>Tác vụ</th><th>Lúc nào chạy</th><th>Làm gì</th><th>Khi LLM lỗi</th></tr>
-              <tr><td><code>term_explain</code></td><td>Trong họp, người dùng chọn một từ</td><td>Giải thích từ, phân loại GENERAL / PROJECT_SPECIFIC / UNCLEAR. Nếu từ đã có trong từ điển dự án, trả ngay, không gọi LLM</td><td>Heuristic cục bộ, ghi log lỗi</td></tr>
-              <tr><td><code>followup_suggest</code></td><td>Trong họp, người dùng bấm</td><td>Đọc 8 turn gần nhất, gợi ý 1–3 câu hỏi kèm mục đích (CLARIFY, DEEPEN, CONFIRM)</td><td>Luật từ khóa tạo câu hỏi mẫu</td></tr>
-              <tr><td><code>minutes_extract</code></td><td>Sau họp, bước 1</td><td>Trích TODO, DECISION, ISSUE. Gán certainty FIRM / TENTATIVE / MISSING và ambiguity cho owner và due</td><td>Dừng sinh biên bản, không ghi bản nháp nào</td></tr>
-              <tr><td><code>minutes_clarify</code></td><td>Sau họp, bước 2</td><td>Tìm chỗ cần làm rõ: DATE_BOUNDARY, OWNER_AMBIGUITY, SCOPE_UNCLEAR, CULTURAL_NUANCE</td><td>Như trên</td></tr>
-              <tr><td><code>minutes_summary</code></td><td>Sau họp, bước 3</td><td>Tóm tắt thảo luận, gắn nhãn "AI tóm tắt"</td><td>Như trên</td></tr>
-              <tr><td><code>glossary_detect</code></td><td>Sau họp, khi duyệt từ mới</td><td>Gợi ý tối đa 15 thuật ngữ mới cho từ điển dự án</td><td>Heuristic cục bộ (regex), có cảnh báo</td></tr>
+              <tr><th data-i18n="ap.b.h1">Tác vụ</th><th data-i18n="ap.b.h2">Lúc nào chạy</th><th data-i18n="ap.b.h3">Làm gì</th><th data-i18n="ap.b.h4">Khi LLM lỗi</th></tr>
+              <tr><td><code>term_explain</code></td><td data-i18n="ap.b.t1.when">Trong họp, người dùng chọn một từ</td><td data-i18n="ap.b.t1.what">Giải thích từ, phân loại GENERAL / PROJECT_SPECIFIC / UNCLEAR. Nếu từ đã có trong từ điển dự án, trả ngay, không gọi LLM</td><td data-i18n="ap.b.t1.fail">Heuristic cục bộ, ghi log lỗi</td></tr>
+              <tr><td><code>followup_suggest</code></td><td data-i18n="ap.b.t2.when">Trong họp, người dùng bấm</td><td data-i18n="ap.b.t2.what">Đọc 8 turn gần nhất, gợi ý 1–3 câu hỏi kèm mục đích (CLARIFY, DEEPEN, CONFIRM)</td><td data-i18n="ap.b.t2.fail">Luật từ khóa tạo câu hỏi mẫu</td></tr>
+              <tr><td><code>minutes_extract</code></td><td data-i18n="ap.b.t3.when">Sau họp, bước 1</td><td data-i18n="ap.b.t3.what">Trích TODO, DECISION, ISSUE. Gán certainty FIRM / TENTATIVE / MISSING và ambiguity cho owner và due</td><td data-i18n="ap.b.t3.fail">Dừng sinh biên bản, không ghi bản nháp nào</td></tr>
+              <tr><td><code>minutes_clarify</code></td><td data-i18n="ap.b.t4.when">Sau họp, bước 2</td><td data-i18n="ap.b.t4.what">Tìm chỗ cần làm rõ: DATE_BOUNDARY, OWNER_AMBIGUITY, SCOPE_UNCLEAR, CULTURAL_NUANCE</td><td data-i18n="ap.b.same">Như trên</td></tr>
+              <tr><td><code>minutes_summary</code></td><td data-i18n="ap.b.t5.when">Sau họp, bước 3</td><td data-i18n="ap.b.t5.what">Tóm tắt thảo luận, gắn nhãn "AI tóm tắt"</td><td data-i18n="ap.b.same">Như trên</td></tr>
+              <tr><td><code>glossary_detect</code></td><td data-i18n="ap.b.t6.when">Sau họp, khi duyệt từ mới</td><td data-i18n="ap.b.t6.what">Gợi ý tối đa 15 thuật ngữ mới cho từ điển dự án</td><td data-i18n="ap.b.t6.fail">Heuristic cục bộ (regex), có cảnh báo</td></tr>
             </table>
           </div>
 
-          <h4 class="fold-sub">Cấu hình gọi model</h4>
+          <h4 class="fold-sub" data-i18n="ap.b.config">Cấu hình gọi model</h4>
           <div class="grid-2">
-            <div class="card">
+            <div class="card" data-i18n="ap.b.gw">
               <h3>Một cổng cho mọi model</h3>
               <p>Tất cả tác vụ đi qua <code>gateway.ts</code>. Mỗi tác vụ có protocol, model, timeout và <code>max_tokens</code> riêng trong <code>config.ts</code>. Temperature luôn bằng 0.</p>
               <p>Hiện tại nhóm dùng GPT-6 Sol và GPT-6 Luna qua protocol tương thích OpenAI. Timeout là 20 s cho nhóm LIVE và 120 s cho nhóm POST.</p>
             </div>
-            <div class="card">
+            <div class="card" data-i18n="ap.b.log">
               <h3>Mọi lần gọi đều được ghi lại</h3>
               <p>Bảng <code>llm_call</code> lưu task, model, phiên bản prompt, danh sách turn đầu vào, token vào/ra, độ trễ, <code>raw_output</code> và kết quả đã kiểm tra. Nhờ đó có thể truy lại vì sao biên bản ra như vậy.</p>
             </div>
@@ -805,20 +759,20 @@
         </details>
 
         <details class="fold">
-          <summary>C. Kiểm soát đầu ra AI</summary>
-          <p class="fold-lead">AI không được tự ghi dữ liệu.</p>
+          <summary data-i18n="ap.c.summary">C. Kiểm soát đầu ra AI</summary>
+          <p class="fold-lead" data-i18n="ap.c.lead">AI không được tự ghi dữ liệu.</p>
           <div class="grid-3">
-            <article class="card">
+            <article class="card" data-i18n="ap.c.c1">
               <span class="tag purple">Kiểm tra cấu trúc</span>
               <h3>JSON theo schema</h3>
               <p>Đầu ra được parse và kiểm tra bằng Zod. Sai cấu trúc thì sinh biên bản thất bại, không lưu gì.</p>
             </article>
-            <article class="card">
+            <article class="card" data-i18n="ap.c.c2">
               <span class="tag purple">Kiểm tra nghiệp vụ</span>
               <h3>Evidence và thành viên</h3>
               <p>Mọi <code>turn_id</code> trích dẫn phải thuộc cuộc họp. <code>member_id</code> phải thuộc dự án. Không có evidence thì FIRM bị hạ xuống TENTATIVE.</p>
             </article>
-            <article class="card">
+            <article class="card" data-i18n="ap.c.c3">
               <span class="tag purple">Ghi nhận</span>
               <h3>Biết backend đã sửa gì</h3>
               <p>Bản ghi <code>validation</code> liệt kê các evidence bị loại, các field bị hạ mức, và các ngày không hợp lệ. Người xem lại thấy được phần AI đã bị hệ thống chỉnh.</p>
@@ -827,69 +781,70 @@
         </details>
 
         <details class="fold">
-          <summary>D. API bên thứ ba</summary>
+          <summary data-i18n="ap.d.summary">D. API bên thứ ba</summary>
           <div class="table-wrap">
             <table>
-              <tr><th>Dịch vụ</th><th>Vai trò</th><th>Cách gọi</th><th>Trạng thái trong code</th></tr>
-              <tr><td>LLM gateway (<code>api.artbloom.tech</code>)</td><td>Sáu tác vụ LLM (GPT-6 Sol, GPT-6 Luna)</td><td>SDK <code>openai</code>, đặt <code>LLM_OPENAI_BASE_URL</code>; có adapter <code>@anthropic-ai/sdk</code> dự phòng</td><td><span class="tag green">Đang dùng</span> Chưa rõ IT đã duyệt gửi transcript qua gateway (LLM-SEC-01)</td></tr>
-              <tr><td>Soniox</td><td>STT realtime kèm dịch, tách người nói, nhận diện ngôn ngữ</td><td>WebSocket, model <code>stt-rt-v5</code></td><td><span class="tag green">Đang dùng</span> Theo cấu hình mới nhất của nhóm</td></tr>
-              <tr><td>AssemblyAI Universal Streaming</td><td>STT realtime, phát hiện kết thúc turn</td><td>WebSocket, model <code>universal-3-6-pro</code></td><td><span class="tag orange">Bản trước</span> Đã thay bằng Soniox</td></tr>
-              <tr><td>Deepgram nova-2</td><td>STT thay thế, tiếng Nhật</td><td>WebSocket, có diarization</td><td><span class="tag blue">Tùy chọn</span> Chỉ khi client chọn <code>provider</code></td></tr>
-              <tr><td>DeepL</td><td>Dịch đa ngôn ngữ (đã thử Nhật ⇄ Việt), có <code>context</code> để giữ ngữ cảnh</td><td>SDK <code>deepl-node</code></td><td><span class="tag orange">Bản trước</span> Dịch nay nằm trong Soniox</td></tr>
-              <tr><td>Thu âm thanh hệ thống (mic + loopback)</td><td>Thu tiếng mọi nền tảng họp hoặc họp trực tiếp</td><td>Desktop Electron, gửi audio về server</td><td><span class="tag green">Đang dùng</span> Không dùng bot vào phòng họp</td></tr>
+              <tr><th data-i18n="ap.d.h1">Dịch vụ</th><th data-i18n="ap.d.h2">Vai trò</th><th data-i18n="ap.d.h3">Cách gọi</th><th data-i18n="ap.d.h4">Trạng thái trong code</th></tr>
+              <tr><td>LLM gateway (<code>api.artbloom.tech</code>)</td><td data-i18n="ap.d.r1.role">Sáu tác vụ LLM (GPT-6 Sol, GPT-6 Luna)</td><td data-i18n="ap.d.r1.how">SDK <code>openai</code>, đặt <code>LLM_OPENAI_BASE_URL</code>; có adapter <code>@anthropic-ai/sdk</code> dự phòng</td><td data-i18n="ap.d.r1.status"><span class="tag green">Đang dùng</span> Chưa rõ IT đã duyệt gửi transcript qua gateway (LLM-SEC-01)</td></tr>
+              <tr><td data-i18n="ap.d.r2.name">STT realtime</td><td data-i18n="ap.d.r2.role">STT realtime kèm dịch, tách người nói, nhận diện ngôn ngữ</td><td data-i18n="ap.d.r2.how">WebSocket, mô hình streaming STT</td><td data-i18n="ap.d.r2.status"><span class="tag green">Đang dùng</span> Theo cấu hình mới nhất của nhóm</td></tr>
+              <tr><td>AssemblyAI Universal Streaming</td><td data-i18n="ap.d.r3.role">STT realtime, phát hiện kết thúc turn</td><td data-i18n="ap.d.r3.how">WebSocket, model <code>universal-3-6-pro</code></td><td data-i18n="ap.d.r3.status"><span class="tag orange">Bản trước</span> Đã thay bằng dịch vụ STT realtime hiện tại</td></tr>
+              <tr><td>Deepgram nova-2</td><td data-i18n="ap.d.r4.role">STT thay thế, tiếng Nhật</td><td data-i18n="ap.d.r4.how">WebSocket, có diarization</td><td data-i18n="ap.d.r4.status"><span class="tag blue">Tùy chọn</span> Chỉ khi client chọn <code>provider</code></td></tr>
+              <tr><td>DeepL</td><td data-i18n="ap.d.r5.role">Dịch đa ngôn ngữ (đã thử Nhật ⇄ Việt), có <code>context</code> để giữ ngữ cảnh</td><td data-i18n="ap.d.r5.how">SDK <code>deepl-node</code></td><td data-i18n="ap.d.r5.status"><span class="tag orange">Bản trước</span> Dịch nay nằm trong dịch vụ STT realtime hiện tại</td></tr>
+              <tr><td data-i18n="ap.d.r6.name">Thu âm thanh hệ thống (mic + loopback)</td><td data-i18n="ap.d.r6.role">Thu tiếng mọi nền tảng họp hoặc họp trực tiếp</td><td data-i18n="ap.d.r6.how">Desktop Electron, gửi audio về server</td><td data-i18n="ap.d.r6.status"><span class="tag green">Đang dùng</span> Không dùng bot vào phòng họp</td></tr>
             </table>
           </div>
-          <div class="highlight-box card">
+          <div class="highlight-box card" data-i18n="ap.d.key">
             <b>Về API key.</b> API key chỉ đặt ở biến môi trường của server. Desktop chỉ gọi backend của nhóm. Repo không chứa API key thật.
           </div>
         </details>
 
         <details class="fold">
-          <summary>E. Đường lui khi demo</summary>
+          <summary data-i18n="ap.e.summary">E. Đường lui khi demo</summary>
           <div class="card fallback">
-            <p>Nếu mạng hoặc thiết bị thu âm lỗi khi demo thì phát file ghi âm mẫu cùng kịch bản. Phần xử lý phía sau (hiện chữ, dịch, viết biên bản) vẫn chạy bình thường.</p>
+            <p data-i18n="ap.e.body">Nếu mạng hoặc thiết bị thu âm lỗi khi demo thì phát file ghi âm mẫu cùng kịch bản. Phần xử lý phía sau (hiện chữ, dịch, viết biên bản) vẫn chạy bình thường.</p>
           </div>
         </details>
 
         <details class="fold" id="appendix-cost">
-          <summary>F. Chi tiết chi phí</summary>
+          <summary data-i18n="ap.f.summary">F. Chi tiết chi phí</summary>
           <ul class="plain-list fold-notes">
-            <li>Soniox stt-rt-v5: $0,12/giờ khi ghi chữ (đã gồm nhận diện người nói và nhận diện ngôn ngữ), $0,18/giờ khi dịch sang một ngôn ngữ <span class="src src-list">Giá niêm yết, cập nhật 06/2026</span>.</li>
-            <li>Soniox tính theo token: âm thanh vào $2 mỗi 1 triệu token, văn bản vào và ra $4 mỗi 1 triệu token. Một giờ họp khoảng 30.000 token âm thanh và 15.000 token văn bản mỗi ngôn ngữ <span class="src src-list">Giá niêm yết</span>.</li>
-            <li>GPT-6 Sol: $2 vào / $10 ra mỗi 1 triệu token. GPT-6 Luna: $0,10 vào / $0,50 ra mỗi 1 triệu token <span class="src src-list">Giá niêm yết 14/10/2026</span>.</li>
-            <li>Biên bản sau họp: 4 lần gọi (trích việc, làm rõ, tóm tắt, tìm từ mới), mỗi lần đọc cả bản ghi khoảng 31–40 nghìn token. Tổng khoảng 125–160 nghìn token vào và khoảng 4,5 nghìn token ra cho một giờ họp. Với GPT-6 Sol, khoảng $0,30–$0,37 <span class="src src-est">ước tính từ prompt thật, sai số khoảng ±25%, chưa đo trên hóa đơn</span>.</li>
-            <li>Hỗ trợ trong họp: khoảng 20 lần bấm mỗi giờ, mỗi lần khoảng 2 nghìn token vào và 0,3 nghìn token ra. Với GPT-6 Luna, khoảng $0,01 <span class="src src-est">giả định</span>.</li>
+            <li data-i18n="ap.f.l1">Dịch vụ STT realtime: $0,12/giờ khi transcript (đã gồm nhận diện người nói và nhận diện ngôn ngữ), $0,30/giờ khi dịch sang một ngôn ngữ <span class="src src-list">Giá niêm yết, cập nhật 06/2026</span>.</li>
+            <li data-i18n="ap.f.l2">Dịch vụ STT realtime tính theo token: âm thanh vào $2 mỗi 1 triệu token, văn bản vào và ra $4 mỗi 1 triệu token. Một giờ họp khoảng 30.000 token âm thanh và 15.000 token văn bản mỗi ngôn ngữ <span class="src src-list">Giá niêm yết</span>.</li>
+            <li data-i18n="ap.f.l3">GPT-6 Sol: $2 vào / $10 ra mỗi 1 triệu token. GPT-6 Luna: $0,10 vào / $0,50 ra mỗi 1 triệu token <span class="src src-list">Giá niêm yết 14/10/2026</span>.</li>
+            <li data-i18n="ap.f.l4">Viết biên bản sau họp: GPT-6 Sol, gồm trích việc, làm rõ, tóm tắt và tìm từ mới. Khoảng $0,01 mỗi biên bản <span class="src src-est">ước tính, chưa đo trên hóa đơn</span>.</li>
+            <li data-i18n="ap.f.l5">Hỗ trợ trong họp: khoảng 20 lần bấm mỗi giờ, mỗi lần khoảng 2 nghìn token vào và 0,3 nghìn token ra. Với GPT-6 Luna, khoảng $0,01 <span class="src src-est">giả định</span>.</li>
           </ul>
         </details>
 
         <details class="fold">
-          <summary>Q&amp;A dự phòng</summary>
+          <summary data-i18n="ap.qa.summary">Q&amp;A dự phòng</summary>
           <dl class="qa">
-            <dt>Chi phí bao nhiêu?</dt>
-            <dd>Khoảng 11.000–13.000 ₫ tiền AI cho 1 giờ họp khi chỉ ghi chữ, khoảng 13.000–15.000 ₫ khi có dịch <span class="src src-list">Giá niêm yết 14/10/2026</span>. Vận hành khoảng 4 ngày công mỗi tháng và server $12–24 mỗi tháng <span class="src src-est">Giả định</span>. Xem mục <a href="#pricing" class="inline-link">Báo giá</a> và máy tính ROI.</dd>
-            <dt>Dữ liệu có an toàn?</dt>
-            <dd>Âm thanh gửi tới Soniox, văn bản gửi tới dịch vụ LLM (GPT-6) qua server của nhóm; desktop không giữ API key. Luôn xin đồng ý trước khi ghi âm.</dd>
-            <dt>Tiếng Nhật chính xác tới đâu?</dt>
-            <dd>Đã chép lời và dịch 449 lượt nói (262 tiếng Nhật, 187 tiếng Việt) trong 17 cuộc họp thử <span class="src src-measured">Đo thực tế</span>. Chưa có số đo độ chính xác chính thức; sẽ đo trên bộ gold khi pilot. Mỗi dòng biên bản có câu gốc để người đọc tự kiểm tra.</dd>
-            <dt>Khác gì Teams Copilot?</dt>
-            <dd>Musubi làm riêng cho họp nhiều ngôn ngữ: dịch ngay khi đang nói (đã thử Nhật ⇄ Việt), biên bản có nhãn Chắc chắn / Chưa chắc / Thiếu kèm câu gốc, đánh dấu những chỗ hai bên dễ hiểu khác nhau, từ điển riêng cho từng dự án, chạy với mọi nền tảng và họp trực tiếp. Chúng tôi chưa kiểm thử đầy đủ các công cụ khác, nên không khẳng định họ không làm được.</dd>
+            <dt data-i18n="ap.qa.q1">Chi phí bao nhiêu?</dt>
+            <dd data-i18n="ap.qa.a1">Khoảng 3.600 ₫ tiền AI cho 1 giờ họp khi chỉ transcript, khoảng 8.300 ₫ khi có dịch <span class="src src-list">Giá niêm yết 14/10/2026</span>. Vận hành khoảng 4 ngày công mỗi tháng và server $12–24 mỗi tháng <span class="src src-est">Giả định</span>. Xem mục <a href="#pricing" class="inline-link">Báo giá</a> và máy tính ROI.</dd>
+            <dt data-i18n="ap.qa.q2">Dữ liệu có an toàn?</dt>
+            <dd data-i18n="ap.qa.a2">Âm thanh gửi tới dịch vụ STT realtime, văn bản gửi tới dịch vụ LLM (GPT-6) qua server của nhóm; desktop không giữ API key. Luôn xin đồng ý trước khi ghi âm.</dd>
+            <dt data-i18n="ap.qa.q3">Tiếng Nhật chính xác tới đâu?</dt>
+            <dd data-i18n="ap.qa.a3">Đã chép lời và dịch 449 lượt nói (262 tiếng Nhật, 187 tiếng Việt) trong 17 cuộc họp thử <span class="src src-measured">Đo thực tế</span>. Chưa có số đo độ chính xác chính thức; sẽ đo trên bộ gold khi pilot. Mỗi dòng biên bản có câu gốc để người đọc tự kiểm tra.</dd>
+            <dt data-i18n="ap.qa.q4">Khác gì Teams Copilot?</dt>
+            <dd data-i18n="ap.qa.a4">Musubi làm riêng cho họp nhiều ngôn ngữ: dịch ngay khi đang nói (đã thử Nhật ⇄ Việt), biên bản có nhãn Chắc chắn / Chưa chắc / Thiếu kèm câu gốc, đánh dấu những chỗ hai bên dễ hiểu khác nhau, từ điển riêng cho từng dự án, chạy với mọi nền tảng và họp trực tiếp. Chúng tôi chưa kiểm thử đầy đủ các công cụ khác, nên không khẳng định họ không làm được.</dd>
           </dl>
         </details>
 
         <footer class="footer">
           <p><strong>Musubi by CUBE</strong> · AI Hackathon 2026 · Track 06</p>
-          <p>Cube System Vietnam · Hồ sơ sơ duyệt · 16/10/2026</p>
+          <p data-i18n="footer.line">Cube System Vietnam · Hồ sơ sơ duyệt · 16/10/2026</p>
         </footer>
       </div>
     </section>
 
   </main>
 
-  <nav class="dot-nav" id="dot-nav" aria-label="Danh sách slide"></nav>
-  <div class="slide-counter" id="slide-counter" aria-live="polite">1 / 17</div>
+  <nav class="dot-nav" id="dot-nav" aria-label="Danh sách slide" data-i18n-attr="aria-label=a11y.dotnav"></nav>
+  <div class="slide-counter" id="slide-counter" aria-live="polite">1 / 16</div>
   <div id="presenter-hint" class="presenter-hint" aria-hidden="true">Click: tiếp · Shift+click/←: lùi · F: toàn màn hình · B: màn đen · P: tắt</div>
   <div id="blank-screen" class="blank-screen" aria-hidden="true"></div>
 
-  <script src="script.js?v=20261014j"></script>
+  <script src="i18n.js?v=20261014k"></script>
+  <script src="script.js?v=20261014k"></script>
 </body>
 </html>
